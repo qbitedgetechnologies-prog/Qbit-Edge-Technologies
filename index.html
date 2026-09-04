@@ -3,482 +3,884 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Qbit Edge Technologies — Web, Mobile, IT Consulting & More</title>
-<meta name="description" content="Qbit Edge Technologies — website & mobile app development, IT consulting, digital marketing, project support and corporate training. Delivering digital solutions since 2017.">
+<title>Qbit Edge Technologies | Mobile Device &amp; IT Liquidation, Central NJ</title>
+<meta name="description" content="Qbit Edge Technologies buys and resells overstock, returned, and traded-in mobile devices, routers, accessories, and wearables. Trusted eBay seller and back-office tech partner based in Central New Jersey.">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --navy-950:#080e1a;
-    --navy-900:#0d1626;
-    --navy-850:#111d33;
-    --navy-800:#16233d;
-    --blue-600:#1e5bd6;
-    --blue-500:#2f6fed;
-    --blue-400:#5b8bf5;
-    --blue-300:#93b4fa;
-    --silver-50:#eef3f9;
-    --silver-200:#c4d0de;
-    --slate-300:#8fa1b8;
-    --slate-400:#6b7f99;
-    --hairline:rgba(91,139,245,0.22);
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--navy-950);
-    color:var(--silver-50);
-    font-family:'Inter',sans-serif;
-    font-weight:400;
-    line-height:1.6;
-    text-align:center;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3,.display{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-0.01em;}
-  a{color:inherit;text-decoration:none;}
-  img,svg{display:block;max-width:100%;}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
-  ::selection{background:var(--blue-500);color:#fff;}
-  :focus-visible{outline:2px solid var(--blue-400);outline-offset:3px;}
+  /* ============================================================
+     Qbit Edge Technologies — design tokens
+     Palette pulled from the logo: graphite base, faceted silver,
+     crystalline blue. Circuit-trace lines echo the mark's own
+     background pattern instead of decorating on top of it.
+     ============================================================ */
+  :root {
+    --bg:          #10141c;
+    --bg-panel:    #161c27;
+    --bg-panel-2:  #1b2230;
+    --line:        rgba(143, 216, 255, 0.14);
+    --line-strong: rgba(143, 216, 255, 0.28);
 
-  /* ---------- NAV ---------- */
-  header{
-    position:sticky;top:0;z-index:50;
-    background:rgba(8,14,26,0.85);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid var(--hairline);
-  }
-  nav{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;max-width:1180px;margin:0 auto;}
-  .brand{display:flex;align-items:center;gap:12px;}
-  .brand .mark{width:46px;height:46px;flex-shrink:0;border-radius:10px;object-fit:cover;border:1px solid var(--hairline);}
-  .brand .name{line-height:1.12;text-align:left;}
-  .brand .name .full{
-    font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px;
-    letter-spacing:0.02em;text-transform:uppercase;
-    background:linear-gradient(180deg,#f4f8fc,#9fb6d4);-webkit-background-clip:text;background-clip:text;color:transparent;
-  }
-  .brand .name .sub{display:block;font-size:8.5px;letter-spacing:0.28em;color:var(--blue-400);margin-top:3px;}
-  .nav-links{display:flex;gap:32px;font-size:13px;letter-spacing:0.02em;font-family:'Space Grotesk',sans-serif;font-weight:500;color:var(--slate-300);}
-  .nav-links a{position:relative;padding:4px 0;transition:color .2s ease;}
-  .nav-links a:hover{color:var(--silver-50);}
-  .nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--blue-500);transition:width .25s ease;}
-  .nav-links a:hover::after{width:100%;}
-  .nav-cta{display:flex;align-items:center;gap:14px;}
-  .btn-cta{
-    display:inline-flex;align-items:center;gap:8px;
-    background:linear-gradient(180deg,var(--blue-500),var(--blue-600));color:#fff;
-    font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.02em;
-    padding:10px 18px;border-radius:8px;
-    box-shadow:0 4px 14px rgba(47,111,237,0.35);
-    transition:transform .2s ease, box-shadow .2s ease;
-  }
-  .btn-cta:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(47,111,237,0.5);}
-  .menu-btn{display:none;background:none;border:1px solid var(--hairline);color:var(--silver-50);width:40px;height:40px;border-radius:8px;align-items:center;justify-content:center;cursor:pointer;}
+    --silver:      #c9cfda;
+    --silver-dim:  #838c9a;
+    --ink:         #eef1f6;
+    --ink-dim:     #99a1ad;
 
-  /* ---------- HERO ---------- */
-  .hero{
-    position:relative;overflow:hidden;
-    padding:118px 28px 108px;
-    text-align:center;
-    background:
-      radial-gradient(ellipse 70% 60% at 50% 12%, rgba(47,111,237,0.20), transparent 60%),
-      linear-gradient(180deg,var(--navy-950) 0%, var(--navy-900) 55%, var(--navy-950) 100%);
-  }
-  .hero-pattern{position:absolute;inset:0;z-index:0;opacity:0.4;display:flex;align-items:center;justify-content:center;}
-  .hero-pattern svg{width:min(1000px,150vw);height:auto;}
-  .hero-inner{position:relative;z-index:1;max-width:800px;margin:0 auto;}
-  .eyebrow{
-    display:inline-flex;align-items:center;gap:10px;
-    font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue-300);
-    margin-bottom:24px;border:1px solid var(--hairline);border-radius:100px;padding:7px 16px;background:rgba(47,111,237,0.06);
-  }
-  .hero h1{
-    font-size:clamp(34px,5.6vw,60px);
-    line-height:1.06;color:var(--silver-50);
-    margin-bottom:22px;
-  }
-  .hero h1 em{font-style:normal;background:linear-gradient(120deg,#8fb2f8,#2f6fed);-webkit-background-clip:text;background-clip:text;color:transparent;}
-  .hero p.lede{font-size:17px;color:var(--slate-300);max-width:600px;margin:0 auto 38px;}
-  .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-  .btn-primary{
-    background:linear-gradient(180deg,var(--blue-500),var(--blue-600));color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;letter-spacing:0.02em;
-    padding:15px 30px;border-radius:10px;
-    display:inline-flex;align-items:center;gap:10px;
-    box-shadow:0 6px 20px rgba(47,111,237,0.4);
-    transition:transform .2s ease, box-shadow .2s ease;
-  }
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(47,111,237,0.55);}
-  .btn-ghost{
-    border:1px solid var(--hairline);color:var(--silver-50);font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:0.02em;
-    padding:15px 28px;border-radius:10px;
-    display:inline-flex;align-items:center;gap:10px;transition:border-color .2s ease, background .2s ease;
-  }
-  .btn-ghost:hover{border-color:var(--blue-400);background:rgba(47,111,237,0.1);}
+    --blue:        #4f95ff;
+    --blue-bright: #7db4ff;
+    --cyan:        #8fd8ff;
 
-  /* ---------- TRUST STRIP ---------- */
-  .trust{border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);background:var(--navy-900);}
-  .trust .wrap{display:flex;flex-wrap:wrap;gap:0;}
-  .trust-item{
-    flex:1 1 220px;padding:26px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;
-    border-right:1px solid var(--hairline);
+    --font-head: 'Space Grotesk', 'Arial Narrow', sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --max: 1180px;
+    --edge: 6px;
   }
-  .trust-item:last-child{border-right:none;}
-  .trust-item svg{width:26px;height:26px;flex-shrink:0;color:var(--blue-400);}
-  .trust-item span{font-size:13.5px;color:var(--slate-300);line-height:1.4;}
-  .trust-item strong{display:block;color:var(--silver-50);font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;margin-bottom:2px;}
 
-  /* ---------- SECTION HEADS ---------- */
-  section{padding:96px 28px;}
-  .section-head{max-width:640px;margin:0 auto 54px;}
-  .section-head .kicker{font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue-300);display:block;margin-bottom:14px;}
-  .section-head h2{font-size:clamp(28px,4vw,42px);color:var(--silver-50);line-height:1.14;}
-  .section-head p{color:var(--slate-300);margin-top:16px;font-size:16px;max-width:540px;margin-left:auto;margin-right:auto;}
+  * { box-sizing: border-box; }
 
-  /* ---------- SERVICES ---------- */
-  .services{background:var(--navy-950);}
-  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:1124px;margin:0 auto;}
-  .svc-card{
-    background:linear-gradient(180deg,var(--navy-900),var(--navy-850));
-    border:1px solid var(--hairline);border-radius:16px;
-    padding:34px 30px;text-align:left;
-    position:relative;overflow:hidden;transition:border-color .25s ease, transform .25s ease, box-shadow .25s ease;
-  }
-  .svc-card:hover{border-color:var(--blue-400);transform:translateY(-4px);box-shadow:0 16px 40px rgba(6,12,26,0.6);}
-  .svc-ico{
-    width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;
-    background:rgba(47,111,237,0.12);border:1px solid var(--hairline);
-  }
-  .svc-ico svg{width:26px;height:26px;color:var(--blue-400);}
-  .svc-card h3{font-size:20px;color:var(--silver-50);margin-bottom:10px;}
-  .svc-card p{font-size:14.5px;color:var(--slate-300);}
-  .svc-card .num{position:absolute;top:22px;right:26px;font-family:'Space Grotesk',sans-serif;font-size:13px;color:var(--slate-400);letter-spacing:0.08em;}
+  html { scroll-behavior: smooth; }
 
-  /* ---------- ABOUT / WHY ---------- */
-  .about{background:linear-gradient(180deg,var(--navy-900),var(--navy-950));border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);}
-  .about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
-  .about-visual{position:relative;aspect-ratio:1/1;max-width:360px;margin:0 auto;}
-  .about-visual svg{width:100%;height:100%;}
-  .about-copy{text-align:left;}
-  .about-copy .kicker{font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue-300);display:block;margin-bottom:14px;}
-  .about-copy h2{font-size:clamp(26px,3.6vw,38px);color:var(--silver-50);margin-bottom:18px;line-height:1.18;}
-  .about-copy p{color:var(--slate-300);font-size:15.5px;margin-bottom:24px;}
-  .about-list{display:flex;flex-direction:column;gap:14px;margin:0 0 6px;}
-  .about-list li{display:flex;gap:12px;align-items:flex-start;list-style:none;font-size:14.5px;color:var(--silver-50);text-align:left;}
-  .about-list svg{width:18px;height:18px;color:var(--blue-400);margin-top:3px;flex-shrink:0;}
-  @media (max-width:860px){.about .wrap{grid-template-columns:1fr;}.about-copy{text-align:center;}.about-list li{text-align:left;}}
-
-  /* ---------- CONTACT ---------- */
-  .contact{background:var(--navy-950);}
-  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
-  .contact-info{text-align:left;}
-  .contact-info .kicker{font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue-300);display:block;margin-bottom:14px;}
-  .contact-info h2{font-size:clamp(26px,3.6vw,38px);margin-bottom:16px;color:var(--silver-50);}
-  .contact-info p{color:var(--slate-300);font-size:15.5px;margin-bottom:28px;max-width:440px;}
-  .info-row{display:flex;align-items:flex-start;gap:14px;text-align:left;padding:16px 0;border-bottom:1px solid var(--hairline);}
-  .info-row svg{width:20px;height:20px;color:var(--blue-400);flex-shrink:0;margin-top:3px;}
-  .info-row strong{display:block;font-family:'Space Grotesk',sans-serif;font-size:12.5px;letter-spacing:0.02em;color:var(--silver-50);margin-bottom:3px;}
-  .info-row span, .info-row a{font-size:14px;color:var(--slate-300);}
-  .info-row a:hover{color:var(--blue-300);}
-  .social-row{display:flex;gap:12px;margin:26px 0 0;}
-  .social-row a{width:44px;height:44px;border:1px solid var(--hairline);border-radius:10px;display:flex;align-items:center;justify-content:center;transition:border-color .2s ease, background .2s ease;}
-  .social-row a:hover{border-color:var(--blue-400);background:rgba(47,111,237,0.1);}
-  .social-row svg{width:19px;height:19px;color:var(--blue-300);}
-
-  form.msg{background:linear-gradient(180deg,var(--navy-900),var(--navy-850));border:1px solid var(--hairline);border-radius:16px;padding:34px;text-align:left;}
-  form.msg .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-  form.msg label{display:block;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;color:var(--slate-300);margin-bottom:7px;margin-top:18px;}
-  form.msg label:first-of-type, form.msg .row2 label{margin-top:0;}
-  form.msg input, form.msg select, form.msg textarea{
-    width:100%;background:var(--navy-950);border:1px solid var(--hairline);border-radius:9px;color:var(--silver-50);
-    padding:12px 14px;font-family:'Inter',sans-serif;font-size:14.5px;
-  }
-  form.msg input:focus, form.msg select:focus, form.msg textarea:focus{border-color:var(--blue-400);outline:none;}
-  form.msg select{appearance:none;-webkit-appearance:none;cursor:pointer;}
-  form.msg textarea{resize:vertical;min-height:110px;}
-  form.msg button{
-    margin-top:24px;width:100%;background:linear-gradient(180deg,var(--blue-500),var(--blue-600));color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;letter-spacing:0.02em;
-    padding:15px;border:none;border-radius:10px;cursor:pointer;
-    box-shadow:0 6px 20px rgba(47,111,237,0.4);
-    transition:transform .2s ease, box-shadow .2s ease;
-  }
-  form.msg button:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(47,111,237,0.55);}
-  @media (max-width:860px){.contact .wrap{grid-template-columns:1fr;}.contact-info{text-align:center;}.contact-info p{margin-left:auto;margin-right:auto;}.info-row{text-align:left;}.social-row{justify-content:center;}}
-  .follow-label{text-align:center;margin-top:48px;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue-300);}
-
-  /* ---------- FOOTER ---------- */
-  footer{border-top:1px solid var(--hairline);padding:34px 28px;background:var(--navy-950);}
-  footer .wrap{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:16px;}
-  footer .fbrand{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--slate-400);}
-  footer .fbrand .mark{width:24px;height:24px;border-radius:6px;object-fit:cover;}
-  footer nav.flinks{display:flex;gap:24px;flex-wrap:wrap;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:0.02em;color:var(--slate-400);}
-  footer nav.flinks a:hover{color:var(--blue-300);}
-
-  /* ---------- MOBILE ---------- */
-  @media (max-width:768px){
-    .hero{
-      min-height:calc(100vh - 76px);
-      min-height:calc(100svh - 76px);
-      display:flex;align-items:center;justify-content:center;
-      padding-top:0;padding-bottom:0;
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
     }
   }
-  @media (max-width:860px){
-    .nav-links{display:none;}
-    .menu-btn{display:flex;}
-    .nav-links.open{
-      display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;
-      background:var(--navy-900);border-bottom:1px solid var(--hairline);padding:22px 28px;gap:18px;
-    }
-    .btn-cta span.long{display:none;}
-    form.msg .row2{grid-template-columns:1fr;}
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Circuit-trace backdrop, faint, fixed */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 64px 64px;
+    opacity: 0.25;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 0%, transparent 75%);
+  }
+
+  a { color: inherit; text-decoration: none; }
+  ul { margin: 0; padding: 0; list-style: none; }
+  img { max-width: 100%; display: block; }
+
+  .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 28px;
+    position: relative;
+    z-index: 1;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-head);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  p { margin: 0; }
+
+  .lede {
+    color: var(--ink-dim);
+    max-width: 62ch;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 13px 24px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn:active { transform: translateY(0); }
+
+  .btn-primary {
+    background: var(--blue);
+    color: #071022;
+  }
+  .btn-primary:hover { background: var(--blue-bright); }
+
+  .btn-ghost {
+    background: transparent;
+    border-color: var(--line-strong);
+    color: var(--ink);
+  }
+  .btn-ghost:hover { border-color: var(--cyan); color: var(--cyan); }
+
+  .btn-block { width: 100%; justify-content: center; }
+
+  /* ---------- Header ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(16, 20, 28, 0.88);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 28px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brand img {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--line-strong);
+  }
+
+  .brand-name {
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 1.55rem;
+    line-height: 1.15;
+    color: var(--ink);
+  }
+  .brand-name span {
+    display: block;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: var(--silver-dim);
+    letter-spacing: 0.02em;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .nav-links a {
+    font-size: 0.92rem;
+    color: var(--ink-dim);
+    transition: color 0.15s ease;
+  }
+  .nav-links a:hover { color: var(--cyan); }
+
+  .nav-phone {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .nav-cta { display: flex; align-items: center; gap: 20px; }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: 1px solid var(--line-strong);
+    color: var(--ink);
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 88px 0 96px;
+  }
+
+  .hero .wrap {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px;
+    align-items: center;
+  }
+
+  .hero-copy {
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.3rem, 4vw, 3.4rem);
+    line-height: 1.08;
+    margin-bottom: 22px;
+  }
+
+  .hero-sub {
+    font-size: 1.08rem;
+    margin: 0 auto 34px;
+  }
+
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 44px;
+    flex-wrap: wrap;
+  }
+
+  .hero-tags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--line);
+    padding-top: 22px;
+  }
+
+  .tag {
+    font-size: 0.78rem;
+    color: var(--silver-dim);
+    border: 1px solid var(--line-strong);
+    padding: 6px 12px;
+    clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+  }
+
+  .hero-art {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-art svg { width: 100%; height: auto; max-width: 460px; }
+
+  /* ---------- Trust bar ---------- */
+  .trust {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 30px 0;
+  }
+  .trust .wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .trust-item {
+    flex: 1 1 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  .trust-item .ico {
+    flex: none;
+    width: 34px;
+    height: 34px;
+    color: var(--cyan);
+  }
+  .trust-item h4 {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+  .trust-item p {
+    font-size: 0.85rem;
+    color: var(--ink-dim);
+  }
+
+  /* ---------- Section shell ---------- */
+  section { position: relative; z-index: 1; }
+
+  .section {
+    padding: 96px 0;
+  }
+
+  .section-head {
+    max-width: 640px;
+    margin: 0 auto 52px;
+    text-align: center;
+  }
+
+  .section-head h2 {
+    font-size: clamp(1.7rem, 2.6vw, 2.3rem);
+    margin-bottom: 14px;
+  }
+
+  .section-alt { background: var(--bg-panel); }
+
+  /* ---------- Services ---------- */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+
+  .service {
+    background: var(--bg);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+    transition: background 0.2s ease;
+  }
+  .section-alt .service { background: var(--bg-panel); }
+
+  .service:hover { background: var(--bg-panel-2); }
+
+  .service .ico {
+    width: 30px;
+    height: 30px;
+    color: var(--blue-bright);
+  }
+
+  .service h3 {
+    font-size: 1.05rem;
+  }
+
+  .service p {
+    font-size: 0.9rem;
+    color: var(--ink-dim);
+  }
+
+  /* ---------- Process ---------- */
+  .process {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+  }
+
+  .step {
+    padding: 0 24px 0 0;
+    border-left: 1px solid var(--line);
+    padding-left: 24px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .step:first-child { border-left: none; padding-left: 0; }
+
+  .step-num {
+    font-family: var(--font-head);
+    font-size: 0.85rem;
+    color: var(--cyan);
+    border: 1px solid var(--line-strong);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
+  }
+
+  .step h4 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .step p {
+    font-size: 0.88rem;
+    color: var(--ink-dim);
+  }
+
+  /* ---------- About split ---------- */
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-copy { display: flex; flex-direction: column; align-items: center; }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .stat {
+    background: var(--bg);
+    padding: 26px;
+    text-align: center;
+  }
+  .stat b {
+    display: block;
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    color: var(--cyan);
+    margin-bottom: 4px;
+  }
+  .stat span {
+    font-size: 0.82rem;
+    color: var(--ink-dim);
+  }
+
+  /* ---------- Estimate form ---------- */
+  .estimate {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 56px;
+    align-items: start;
+  }
+
+  .estimate-copy {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .estimate-copy h2 { margin-bottom: 16px; }
+  .estimate-copy p { margin-bottom: 22px; }
+
+  .estimate-phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-head);
+    font-size: 1.3rem;
+    color: var(--ink);
+    margin-top: 28px;
+  }
+  .estimate-phone .ico { width: 22px; height: 22px; color: var(--cyan); }
+
+  form.card {
+    background: var(--bg-panel);
+    border: 1px solid var(--line-strong);
+    padding: 36px;
+    clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 22px 100%, 0 calc(100% - 22px));
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .field {
+    margin-bottom: 18px;
+  }
+  .field.full { grid-column: 1 / -1; }
+
+  .field label {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--ink-dim);
+    margin-bottom: 7px;
+    text-align: center;
+  }
+
+  .field input,
+  .field select,
+  .field textarea {
+    text-align: center;
+  }
+
+  .field input,
+  .field select,
+  .field textarea {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--line-strong);
+    color: var(--ink);
+    padding: 11px 13px;
+    font-family: var(--font-body);
+    font-size: 0.94rem;
+    transition: border-color 0.15s ease;
+  }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus {
+    outline: none;
+    border-color: var(--cyan);
+  }
+
+  .field textarea { resize: vertical; min-height: 96px; }
+
+  .form-note {
+    font-size: 0.78rem;
+    color: var(--silver-dim);
+    margin-top: 14px;
+  }
+
+  .form-status {
+    margin-top: 16px;
+    font-size: 0.88rem;
+    display: none;
+  }
+  .form-status.show { display: block; }
+  .form-status.ok { color: var(--cyan); }
+  .form-status.err { color: #ff8f8f; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 28px 0;
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .footer-social a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cyan);
+    border: 1px solid var(--line-strong);
+    clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .footer-social a:hover { border-color: var(--cyan); background: rgba(143, 216, 255, 0.08); }
+  .footer-social svg { width: 19px; height: 19px; }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--silver-dim);
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 920px) {
+    .hero .wrap { grid-template-columns: 1fr; }
+    .hero-art { order: -1; max-width: 320px; margin: 0 auto 12px; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .process { grid-template-columns: repeat(2, 1fr); row-gap: 32px; }
+    .step:nth-child(3) { border-left: none; padding-left: 0; }
+    .about { grid-template-columns: 1fr; }
+    .estimate { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .nav-toggle { display: flex; }
+  }
+
+  @media (max-width: 600px) {
+    .hero { padding: 56px 0 64px; }
+    .section { padding: 64px 0; }
+    .services-grid { grid-template-columns: 1fr; }
+    .process { grid-template-columns: 1fr; }
+    .step { border-left: none; padding-left: 0; padding-top: 20px; border-top: 1px solid var(--line); }
+    .step:first-child { border-top: none; padding-top: 0; }
+    .trust .wrap { flex-direction: column; }
+    .form-row { grid-template-columns: 1fr; }
+    form.card { padding: 26px 20px; }
+  }
+
+  /* focus visibility */
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 2px;
   }
 </style>
 </head>
 <body>
 
 <header>
-  <nav>
-    <a href="#top" class="brand" aria-label="Qbit Edge Technologies home">
-      <img class="mark" src="qbit-mark.png" width="46" height="46" alt="Qbit Edge Technologies logo">
-      <span class="name">
-        <span class="full">Qbit Edge</span>
-        <span class="sub">TECHNOLOGIES</span>
-      </span>
+  <nav class="nav wrap">
+    <a href="#top" class="brand">
+      <img src="qbit-mark.png" alt="Qbit Edge Technologies logo">
+      <span class="brand-name">QBIT EDGE<span>Technologies</span></span>
     </a>
-
-    <div class="nav-links" id="navLinks">
+    <div class="nav-links">
       <a href="#services">Services</a>
+      <a href="#process">How It Works</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#estimate">Contact</a>
+      <a href="tel:17328238883" class="nav-phone">732-823-8883</a>
     </div>
-
     <div class="nav-cta">
-      <a class="btn-cta" href="#contact">
-        <span class="long">Get a Quote</span>
-        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display:inline"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="1" y1="4" x2="17" y2="4"/><line x1="1" y1="9" x2="17" y2="9"/><line x1="1" y1="14" x2="17" y2="14"/></svg>
       </button>
     </div>
   </nav>
+  <div id="mobileMenu" class="wrap" style="display:none; padding-bottom:18px;">
+    <div style="display:flex; flex-direction:column; gap:16px;">
+      <a href="#services">Services</a>
+      <a href="#process">How It Works</a>
+      <a href="#about">About</a>
+      <a href="#estimate">Contact</a>
+      <a href="tel:17328238883" class="nav-phone">732-823-8883</a>
+    </div>
+  </div>
 </header>
 
 <main id="top">
 
-  <!-- HERO -->
+  <!-- ============ HERO ============ -->
   <section class="hero">
-    <div class="hero-pattern" aria-hidden="true">
-      <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-        <g fill="none" stroke="var(--blue-500)" stroke-width="0.8" opacity="0.5">
-          <path d="M40 80 H180 V40 M180 80 H320 M220 80 V160 H360"/>
-          <path d="M560 120 H420 V70 M420 120 H300 M360 120 V210 H210"/>
-          <path d="M60 300 H200 V260 M200 300 H340 V340 H460"/>
-          <path d="M540 300 H400 V350 M400 300 H520 V240"/>
-          <circle cx="180" cy="80" r="4" fill="var(--blue-400)"/><circle cx="420" cy="120" r="4" fill="var(--blue-400)"/>
-          <circle cx="200" cy="300" r="4" fill="var(--blue-400)"/><circle cx="400" cy="300" r="4" fill="var(--blue-400)"/>
-          <circle cx="360" cy="160" r="3" fill="var(--blue-300)"/><circle cx="210" cy="210" r="3" fill="var(--blue-300)"/>
-        </g>
-      </svg>
-    </div>
-    <div class="hero-inner">
-      <span class="eyebrow">Established 2017</span>
-      <h1>Technology that gives your business the <em>edge</em>.</h1>
-      <p class="lede">From websites and mobile apps to IT consulting, digital marketing and training — Qbit Edge Technologies designs, builds and supports the digital tools that move your business forward.</p>
-      <div class="hero-actions">
-        <a class="btn-primary" href="#contact">Get a Quote
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display:inline"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a class="btn-ghost" href="#services">Explore Services</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- TRUST STRIP -->
-  <div class="trust">
     <div class="wrap">
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2.5 6.5L21 10l-5 4.5L17.5 21 12 17l-5.5 4L8 14.5 3 10l6.5-1.5L12 2Z"/></svg>
-        <span><strong>Since 2017</strong>Years of proven delivery</span>
-      </div>
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7l9-4 9 4-9 4-9-4Z"/><path d="M3 7v10l9 4 9-4V7"/></svg>
-        <span><strong>End-to-end</strong>Strategy, build, launch &amp; support</span>
-      </div>
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        <span><strong>A real partner</strong>Long-term support, not one-off</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- SERVICES -->
-  <section class="services" id="services">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="kicker">What We Do</span>
-        <h2>Full-stack digital services, under one roof.</h2>
-        <p>Six core capabilities that take an idea from concept to launch — and keep it running long after.</p>
-      </div>
-
-      <div class="svc-grid">
-        <div class="svc-card">
-          <span class="num">01</span>
-          <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></div>
-          <h3>Website Development</h3>
-          <p>Fast, responsive, secure websites and web apps — from marketing sites to custom platforms — built to convert and scale with your business.</p>
+      <div class="hero-copy">
+        <h1>Overstock, returned, and used mobile inventory — turned into fast, fair payouts.</h1>
+        <p class="hero-sub lede">Qbit Edge Technologies buys and resells full inventories of smartphones, tablets, wearables, routers, and accessories. A worldwide distribution network and a top-rated eBay storefront mean your stock moves quickly, at real market value, with none of the hassle.</p>
+        <div class="hero-actions">
+          <a href="#estimate" class="btn btn-primary">Request a free estimate</a>
+          <a href="#process" class="btn btn-ghost">See how it works</a>
         </div>
-        <div class="svc-card">
-          <span class="num">02</span>
-          <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div>
-          <h3>Mobile App Development</h3>
-          <p>Native and cross-platform iOS &amp; Android apps, engineered for performance and a seamless user experience your customers will love.</p>
-        </div>
-        <div class="svc-card">
-          <span class="num">03</span>
-          <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2Z"/><path d="M9 21h6M10 17v4M14 17v4"/></svg></div>
-          <h3>IT Consulting</h3>
-          <p>Strategic technology guidance — architecture, cloud, security and systems — so you make the right build, buy and scale decisions with confidence.</p>
-        </div>
-        <div class="svc-card">
-          <span class="num">04</span>
-          <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11l18-8-8 18-2-8-8-2Z"/></svg></div>
-          <h3>Digital Marketing</h3>
-          <p>SEO, paid campaigns, social and content that grow your reach and turn traffic into measurable, revenue-driving results.</p>
-        </div>
-        <div class="svc-card">
-          <span class="num">05</span>
-          <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2v6h6"/><path d="M4 2h10l6 6v14H4z"/><path d="M9 15l2 2 4-4"/></svg></div>
-          <h3>Project Support</h3>
-          <p>Ongoing maintenance, staff augmentation and managed support to keep your products stable and your teams moving at full speed.</p>
-        </div>
-        <div class="svc-card">
-          <span class="num">06</span>
-          <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 10L12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg></div>
-          <h3>Corporate Training</h3>
-          <p>Hands-on training in modern development, tools and workflows to upskill your teams and future-proof your organisation.</p>
+        <div class="hero-tags">
+          <span class="tag">Smartphones &amp; tablets</span>
+          <span class="tag">Wearables</span>
+          <span class="tag">Routers &amp; networking</span>
+          <span class="tag">Accessories</span>
+          <span class="tag">Back-office solutions</span>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="wrap">
-      <div class="about-visual" aria-hidden="true">
-        <svg viewBox="0 0 300 300">
+      <div class="hero-art">
+        <svg viewBox="0 0 460 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Faceted crystal graphic">
           <defs>
-            <linearGradient id="aboutSilver" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f4f8fc"/><stop offset="100%" stop-color="#7f93ad"/></linearGradient>
-            <linearGradient id="aboutBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#8fb2f8"/><stop offset="100%" stop-color="#1e5bd6"/></linearGradient>
+            <linearGradient id="gShard" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#8fd8ff"/>
+              <stop offset="100%" stop-color="#3763ad"/>
+            </linearGradient>
+            <linearGradient id="gShard2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#c9cfda"/>
+              <stop offset="100%" stop-color="#6b7382"/>
+            </linearGradient>
           </defs>
-          <polygon points="150,24 258,86 258,214 150,276 42,214 42,86" fill="none" stroke="url(#aboutSilver)" stroke-width="2" opacity="0.9"/>
-          <polygon points="150,60 226,104 226,196 150,240 74,196 74,104" fill="none" stroke="var(--blue-500)" stroke-width="1" stroke-dasharray="3 5" opacity="0.6"/>
-          <circle cx="150" cy="150" r="52" fill="none" stroke="url(#aboutSilver)" stroke-width="5"/>
-          <path d="M162 162 L206 206" stroke="url(#aboutBlue)" stroke-width="7" stroke-linecap="round"/>
-          <path d="M196 150 L246 116 L232 172 Z" fill="url(#aboutBlue)" opacity="0.9"/>
-          <text x="150" y="285" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="15" fill="var(--blue-300)">EST. 2017</text>
+          <g opacity="0.9">
+            <polygon points="230,40 300,150 230,260 160,150" fill="url(#gShard)" opacity="0.85"/>
+            <polygon points="230,40 230,260 160,150" fill="#9fe0ff" opacity="0.35"/>
+            <polygon points="150,120 210,240 150,340 90,240" fill="url(#gShard2)" opacity="0.9"/>
+            <polygon points="150,120 150,340 90,240" fill="#eef1f6" opacity="0.25"/>
+            <polygon points="300,160 350,250 300,340 255,250" fill="url(#gShard)" opacity="0.7"/>
+          </g>
+          <g stroke="#4f95ff" stroke-width="1" opacity="0.35" fill="none">
+            <circle cx="230" cy="230" r="180"/>
+            <circle cx="230" cy="230" r="140"/>
+          </g>
+          <g stroke="#8fd8ff" stroke-width="1.4" opacity="0.5" fill="none">
+            <line x1="230" y1="40" x2="230" y2="10"/>
+            <line x1="90" y1="240" x2="55" y2="240"/>
+            <line x1="350" y1="250" x2="395" y2="250"/>
+            <circle cx="230" cy="10" r="4" fill="#8fd8ff"/>
+            <circle cx="55" cy="240" r="4" fill="#8fd8ff"/>
+            <circle cx="395" cy="250" r="4" fill="#8fd8ff"/>
+          </g>
         </svg>
       </div>
-      <div class="about-copy">
-        <span class="kicker">Who We Are</span>
-        <h2>A technology partner built for the long run.</h2>
-        <p>Founded in 2017, Qbit Edge Technologies is a full-stack technology company. From the first line of code to launch and beyond, we design, build, market and support digital products for businesses across the region — combining engineering depth with a partner's commitment to your success.</p>
-        <ul class="about-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4L19 6"/></svg> One team for web, mobile, marketing and support</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4L19 6"/></svg> Senior expertise across the full delivery lifecycle</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4L19 6"/></svg> Transparent, ongoing partnership — not one-off projects</li>
-        </ul>
+    </div>
+  </section>
+
+  <!-- ============ TRUST BAR ============ -->
+  <section class="trust">
+    <div class="wrap">
+      <div class="trust-item">
+        <svg class="ico" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M17 3 30 9v10c0 7-6 11-13 12C10 30 4 26 4 19V9z"/><path d="M11 17l4 4 8-8"/></svg>
+        <div>
+          <h4>Trusted eBay seller</h4>
+          <p>A proven, top-rated storefront with a track record buyers rely on.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <svg class="ico" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="17" cy="17" r="13"/><path d="M4 17h26M17 4c4 4 4 22 0 26M17 4c-4 4-4 22 0 26"/></svg>
+        <div>
+          <h4>Worldwide distribution</h4>
+          <p>A resale network built to move inventory fast, wherever demand is highest.</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <svg class="ico" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M17 4 4 11v6c0 8 5.5 13 13 13s13-5 13-13v-6z"/><path d="M17 15v8"/></svg>
+        <div>
+          <h4>Based in Central New Jersey</h4>
+          <p>Positioned for quick pickup, drop-off, and freight across the Northeast corridor.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
+  <!-- ============ SERVICES ============ -->
+  <section class="section" id="services">
     <div class="wrap">
-      <div class="contact-info">
-        <span class="kicker">Get In Touch</span>
-        <h2>Let's build your edge.</h2>
-        <p>Tell us about your project and we'll get back to you with next steps. New builds, ongoing support, or a quick question — we're happy to help.</p>
-
-        <div class="info-row">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-          <div><strong>Email</strong><a href="mailto:qbitedgetechnologies@gmail.com">qbitedgetechnologies@gmail.com</a></div>
-        </div>
-        <div class="info-row">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s7-6.3 7-12A7 7 0 0 0 5 10c0 5.7 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><strong>Location</strong><span>Central New Jersey, USA</span></div>
-        </div>
-        <div class="info-row">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
-          <div><strong>Hours</strong><span>Mon&ndash;Thu: 9:00 AM &ndash; 5:00 PM<br>Fri: 9:00 AM &ndash; 12:00 PM</span></div>
-        </div>
-
+      <div class="section-head">
+        <h2>What we handle</h2>
+        <p class="lede">From a single pallet of returns to a full-scale liquidation program, we buy, process, and place inventory — and keep the systems running behind it.</p>
       </div>
-
-      <!-- Quote / contact form — action set to FormSubmit once the real email is provided -->
-      <form class="msg" action="https://formsubmit.co/qbitedgetechnologies@gmail.com" method="post">
-        <input type="hidden" name="_subject" value="New quote request from qbitedge website">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="true">
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
-
-        <div class="row2">
-          <div>
-            <label for="fname">Name</label>
-            <input id="fname" name="Name" type="text" required placeholder="Your name">
-          </div>
-          <div>
-            <label for="fcompany">Company</label>
-            <input id="fcompany" name="Company" type="text" placeholder="Company (optional)">
-          </div>
+      <div class="services-grid">
+        <div class="service">
+          <svg class="ico" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="6" y="4" width="18" height="22" rx="1"/><line x1="6" y1="9" x2="24" y2="9"/><line x1="6" y1="21" x2="24" y2="21"/></svg>
+          <h3>Overstock &amp; liquidation purchasing</h3>
+          <p>We buy full inventories of high- and low-end mobile devices in a single transaction, no matter the volume.</p>
         </div>
-        <div class="row2">
-          <div>
-            <label for="femail">Email</label>
-            <input id="femail" name="Email" type="email" required placeholder="you@company.com">
-          </div>
-          <div>
-            <label for="fphone">Phone</label>
-            <input id="fphone" name="Phone" type="tel" placeholder="Your phone (optional)">
-          </div>
+        <div class="service">
+          <svg class="ico" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 15a11 11 0 0 1 19-7.5M26 15A11 11 0 0 1 7 22.5"/><path d="M23 4v5h-5M7 26v-5h5"/></svg>
+          <h3>Returns &amp; trade-in processing</h3>
+          <p>Returned, traded-in, and obsolete stock is graded, sorted, and turned back into working capital.</p>
         </div>
-        <label for="fservice">Service Interested In</label>
-        <select id="fservice" name="Service">
-          <option value="">Select a service…</option>
-          <option>Website Development</option>
-          <option>Mobile App Development</option>
-          <option>IT Consulting</option>
-          <option>Digital Marketing</option>
-          <option>Project Support</option>
-          <option>Corporate Training</option>
-          <option>Something else</option>
-        </select>
-        <label for="fmsg">Project Details</label>
-        <textarea id="fmsg" name="Project Details" required placeholder="Tell us what you're looking to build or improve…"></textarea>
-        <button type="submit">Request a Quote</button>
-      </form>
+        <div class="service">
+          <svg class="ico" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="15" cy="10" r="4"/><path d="M11 14h8v9a4 4 0 0 1-8 0z"/></svg>
+          <h3>Wearables, routers &amp; accessories</h3>
+          <p>Smartwatches, fitness trackers, networking gear, and accessories move through the same fast channel.</p>
+        </div>
+        <div class="service">
+          <svg class="ico" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="5" y="6" width="20" height="13" rx="1"/><line x1="11" y1="24" x2="19" y2="24"/><line x1="15" y1="19" x2="15" y2="24"/></svg>
+          <h3>Back-office tech solutions</h3>
+          <p>Software and hardware support for small and medium businesses — the systems that keep resale operations running.</p>
+        </div>
+        <div class="service">
+          <svg class="ico" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="8" width="9" height="9"/><rect x="17" y="8" width="9" height="9"/><rect x="10" y="17" width="9" height="9"/></svg>
+          <h3>eCommerce platform integration</h3>
+          <p>We work directly with general-goods eCommerce platforms to keep listings, stock, and fulfillment in sync.</p>
+        </div>
+        <div class="service">
+          <svg class="ico" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="15" cy="15" r="11"/><path d="M15 4c3 3 3 19 0 22M15 4c-3 3-3 19 0 22M4 15h22"/></svg>
+          <h3>Global resale distribution</h3>
+          <p>An established buyer network places devices where they're worth the most, quickly.</p>
+        </div>
+      </div>
     </div>
-    <div class="wrap" style="display:block;">
-      <p class="follow-label">Follow us</p>
-      <div class="social-row" style="justify-content:center;margin-top:14px;">
-        <a href="https://www.facebook.com/Qbit.Edge.58760/" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12Z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/qbit.edge0717" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
-        </a>
-        <a href="https://www.tiktok.com/@qbit.edge.technol" target="_blank" rel="noopener" aria-label="TikTok">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 2h-3v13.5a3 3 0 1 1-2.5-2.96V9.4a6 6 0 1 0 5.5 5.98V8.9a7.5 7.5 0 0 0 4.5 1.5V7.4a4.5 4.5 0 0 1-4.5-4.5V2Z"/></svg>
-        </a>
-        <a href="mailto:qbitedgetechnologies@gmail.com" aria-label="Email">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-        </a>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="section section-alt" id="process">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>How a sale works</h2>
+        <p class="lede">A straightforward path from inventory to payout — built for businesses that don't have time to sit on stock.</p>
       </div>
+      <div class="process">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h4>Submit your inventory details</h4>
+          <p>Tell us what you're moving — device types, condition, and approximate volume.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h4>Get a no-obligation quote</h4>
+          <p>We assess the inventory and come back with a fair, market-based offer.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h4>We arrange pickup or shipping</h4>
+          <p>Local pickup across Central NJ or freight coordination anywhere else.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h4>Get paid</h4>
+          <p>Once inventory is verified, payment moves quickly — no lengthy holds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="wrap about">
+      <div class="about-copy">
+        <h2 style="margin-bottom:18px;">Built for businesses sitting on inventory they don't want to hold</h2>
+        <p class="lede" style="margin-bottom:20px;">Qbit Edge Technologies is based in Central New Jersey, working with retailers, carriers, and eCommerce sellers who need overstock, returns, and end-of-life devices off their books — without a fire sale. As a trusted eBay seller with a worldwide distribution network, we move inventory to buyers who value it, and we back that up with the software and hardware support small and medium businesses need to keep operating.</p>
+        <a href="#estimate" class="btn btn-ghost">Talk to us about your inventory</a>
+      </div>
+      <div class="about-stats">
+        <div class="stat"><b>New &amp; used</b><span>Devices bought in any condition</span></div>
+        <div class="stat"><b>Worldwide</b><span>Distribution &amp; resale network</span></div>
+        <div class="stat"><b>eBay</b><span>Trusted seller storefront</span></div>
+        <div class="stat"><b>Central NJ</b><span>Home base &amp; logistics hub</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ESTIMATE FORM ============ -->
+  <section class="section section-alt" id="estimate">
+    <div class="wrap estimate">
+      <div class="estimate-copy">
+        <h2>Request a free estimate</h2>
+        <p class="lede">Send over what you're working with — a single pallet or a full warehouse — and we'll come back with a quote. No obligation, no pressure.</p>
+        <p class="lede">Prefer to talk it through first? Call us directly.</p>
+        <div class="estimate-phone">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 2a11 11 0 0 0 5.5 5.5l2-2.5 5 2v4a2 2 0 0 1-2 2C11 22 2 13 2 6a2 2 0 0 1 2-2z"/></svg>
+          <a href="tel:17328238883">732-823-8883</a>
+        </div>
+      </div>
+
+      <!-- Estimate form -> FormSubmit AJAX endpoint (emails qbitedgetechnologies@gmail.com) -->
+      <form class="card" id="estimateForm" action="https://formsubmit.co/ajax/qbitedgetechnologies@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New estimate request — qbitedgetechnologies.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="company">Company name</label>
+            <input type="text" id="company" name="company">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="category">Inventory type</label>
+            <select id="category" name="category">
+              <option>Smartphones</option>
+              <option>Tablets</option>
+              <option>Wearables</option>
+              <option>Routers / networking</option>
+              <option>Accessories</option>
+              <option>Mixed / other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="quantity">Estimated quantity</label>
+            <input type="text" id="quantity" name="quantity" placeholder="e.g. 500 units">
+          </div>
+        </div>
+        <div class="field full">
+          <label for="details">Tell us about the inventory</label>
+          <textarea id="details" name="details" placeholder="Condition, brands/models, location, timeline..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit request</button>
+        <p class="form-note">We typically respond within one business day. You can also reach us directly at 732-823-8883.</p>
+        <p class="form-status" id="formStatus"></p>
+      </form>
     </div>
   </section>
 
@@ -486,28 +888,81 @@
 
 <footer>
   <div class="wrap">
-    <div class="fbrand">
-      <img class="mark" src="qbit-mark.png" width="24" height="24" alt="">
-      <span>© <span id="year"></span> Qbit Edge Technologies. All rights reserved.</span>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/Qbit.Edge.58760/" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12Z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/qbit.edge0717" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@qbit.edge.technol" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 2h-3v13.5a3 3 0 1 1-2.5-2.96V9.4a6 6 0 1 0 5.5 5.98V8.9a7.5 7.5 0 0 0 4.5 1.5V7.4a4.5 4.5 0 0 1-4.5-4.5V2Z"/></svg>
+      </a>
     </div>
-    <nav class="flinks">
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="#top">Back to top</a>
-    </nav>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Qbit Edge Technologies · Central New Jersey · 732-823-8883</span>
+    </div>
   </div>
 </footer>
 
 <script>
+  // Footer year
   document.getElementById('year').textContent = new Date().getFullYear();
-  const menuBtn = document.getElementById('menuBtn');
-  const navLinks = document.getElementById('navLinks');
-  menuBtn.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded', isOpen);
-  });
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // Mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (navToggle && mobileMenu) {
+    navToggle.addEventListener('click', () => {
+      const open = mobileMenu.style.display === 'block';
+      mobileMenu.style.display = open ? 'none' : 'block';
+      navToggle.setAttribute('aria-expanded', String(!open));
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.style.display = 'none';
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // Estimate form submit (FormSubmit AJAX)
+  const form = document.getElementById('estimateForm');
+  const status = document.getElementById('formStatus');
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const action = form.getAttribute('action');
+
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      try {
+        const res = await fetch(action, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(form)
+        });
+
+        if (res.ok) {
+          status.textContent = 'Thanks — your request is in. We\'ll be in touch shortly.';
+          status.className = 'form-status show ok';
+          form.reset();
+        } else {
+          status.textContent = 'Something went wrong sending that. Please call 732-823-8883.';
+          status.className = 'form-status show err';
+        }
+      } catch (err) {
+        status.textContent = 'Something went wrong sending that. Please call 732-823-8883.';
+        status.className = 'form-status show err';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit request';
+      }
+    });
+  }
 </script>
 
 </body>
