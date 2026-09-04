@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qbit Edge Technologies — Web, Mobile, IT Consulting & More</title>
+<meta name="description" content="Qbit Edge Technologies — website & mobile app development, IT consulting, digital marketing, project support and corporate training. Delivering digital solutions since 2017.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-950:#080e1a;
+    --navy-900:#0d1626;
+    --navy-850:#111d33;
+    --navy-800:#16233d;
+    --blue-600:#1e5bd6;
+    --blue-500:#2f6fed;
+    --blue-400:#5b8bf5;
+    --blue-300:#93b4fa;
+    --silver-50:#eef3f9;
+    --silver-200:#c4d0de;
+    --slate-300:#8fa1b8;
+    --slate-400:#6b7f99;
+    --hairline:rgba(91,139,245,0.22);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--navy-950);
+    color:var(--silver-50);
+    font-family:'Inter',sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    text-align:center;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-0.01em;}
+  a{color:inherit;text-decoration:none;}
+  img,svg{display:block;max-width:100%;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+  ::selection{background:var(--blue-500);color:#fff;}
+  :focus-visible{outline:2px solid var(--blue-400);outline-offset:3px;}
+
+  /* ---------- NAV ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(8,14,26,0.85);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--hairline);
+  }
+  nav{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;max-width:1180px;margin:0 auto;}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand .mark{width:46px;height:46px;flex-shrink:0;border-radius:10px;object-fit:cover;border:1px solid var(--hairline);}
+  .brand .name{line-height:1.12;text-align:left;}
+  .brand .name .full{
+    font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px;
+    letter-spacing:0.02em;text-transform:uppercase;
+    background:linear-gradient(180deg,#f4f8fc,#9fb6d4);-webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .brand .name .sub{display:block;font-size:8.5px;letter-spacing:0.28em;color:var(--blue-400);margin-top:3px;}
+  .nav-links{display:flex;gap:32px;font-size:13px;letter-spacing:0.02em;font-family:'Space Grotesk',sans-serif;font-weight:500;color:var(--slate-300);}
+  .nav-links a{position:relative;padding:4px 0;transition:color .2s ease;}
+  .nav-links a:hover{color:var(--silver-50);}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--blue-500);transition:width .25s ease;}
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{display:flex;align-items:center;gap:14px;}
+  .btn-cta{
+    display:inline-flex;align-items:center;gap:8px;
+    background:linear-gradient(180deg,var(--blue-500),var(--blue-600));color:#fff;
+    font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.02em;
+    padding:10px 18px;border-radius:8px;
+    box-shadow:0 4px 14px rgba(47,111,237,0.35);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .btn-cta:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(47,111,237,0.5);}
+  .menu-btn{display:none;background:none;border:1px solid var(--hairline);color:var(--silver-50);width:40px;height:40px;border-radius:8px;align-items:center;justify-content:center;cursor:pointer;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    padding:118px 28px 108px;
+    text-align:center;
+    background:
+      radial-gradient(ellipse 70% 60% at 50% 12%, rgba(47,111,237,0.20), transparent 60%),
+      linear-gradient(180deg,var(--navy-950) 0%, var(--navy-900) 55%, var(--navy-950) 100%);
+  }
+  .hero-pattern{position:absolute;inset:0;z-index:0;opacity:0.4;display:flex;align-items:center;justify-content:center;}
+  .hero-pattern svg{width:min(1000px,150vw);height:auto;}
+  .hero-inner{position:relative;z-index:1;max-width:800px;margin:0 auto;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue-300);
+    margin-bottom:24px;border:1px solid var(--hairline);border-radius:100px;padding:7px 16px;background:rgba(47,111,237,0.06);
+  }
+  .hero h1{
+    font-size:clamp(34px,5.6vw,60px);
+    line-height:1.06;color:var(--silver-50);
+    margin-bottom:22px;
+  }
+  .hero h1 em{font-style:normal;background:linear-gradient(120deg,#8fb2f8,#2f6fed);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .hero p.lede{font-size:17px;color:var(--slate-300);max-width:600px;margin:0 auto 38px;}
+  .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .btn-primary{
+    background:linear-gradient(180deg,var(--blue-500),var(--blue-600));color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;letter-spacing:0.02em;
+    padding:15px 30px;border-radius:10px;
+    display:inline-flex;align-items:center;gap:10px;
+    box-shadow:0 6px 20px rgba(47,111,237,0.4);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(47,111,237,0.55);}
+  .btn-ghost{
+    border:1px solid var(--hairline);color:var(--silver-50);font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:14px;letter-spacing:0.02em;
+    padding:15px 28px;border-radius:10px;
+    display:inline-flex;align-items:center;gap:10px;transition:border-color .2s ease, background .2s ease;
+  }
+  .btn-ghost:hover{border-color:var(--blue-400);background:rgba(47,111,237,0.1);}
+
+  /* ---------- TRUST STRIP ---------- */
+  .trust{border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);background:var(--navy-900);}
+  .trust .wrap{display:flex;flex-wrap:wrap;gap:0;}
+  .trust-item{
+    flex:1 1 220px;padding:26px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;
+    border-right:1px solid var(--hairline);
+  }
+  .trust-item:last-child{border-right:none;}
+  .trust-item svg{width:26px;height:26px;flex-shrink:0;color:var(--blue-400);}
+  .trust-item span{font-size:13.5px;color:var(--slate-300);line-height:1.4;}
+  .trust-item strong{display:block;color:var(--silver-50);font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;margin-bottom:2px;}
+
+  /* ---------- SECTION HEADS ---------- */
+  section{padding:96px 28px;}
+  .section-head{max-width:640px;margin:0 auto 54px;}
+  .section-head .kicker{font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue-300);display:block;margin-bottom:14px;}
+  .section-head h2{font-size:clamp(28px,4vw,42px);color:var(--silver-50);line-height:1.14;}
+  .section-head p{color:var(--slate-300);margin-top:16px;font-size:16px;max-width:540px;margin-left:auto;margin-right:auto;}
+
+  /* ---------- SERVICES ---------- */
+  .services{background:var(--navy-950);}
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:1124px;margin:0 auto;}
+  .svc-card{
+    background:linear-gradient(180deg,var(--navy-900),var(--navy-850));
+    border:1px solid var(--hairline);border-radius:16px;
+    padding:34px 30px;text-align:left;
+    position:relative;overflow:hidden;transition:border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+  }
+  .svc-card:hover{border-color:var(--blue-400);transform:translateY(-4px);box-shadow:0 16px 40px rgba(6,12,26,0.6);}
+  .svc-ico{
+    width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+    background:rgba(47,111,237,0.12);border:1px solid var(--hairline);
+  }
+  .svc-ico svg{width:26px;height:26px;color:var(--blue-400);}
+  .svc-card h3{font-size:20px;color:var(--silver-50);margin-bottom:10px;}
+  .svc-card p{font-size:14.5px;color:var(--slate-300);}
+  .svc-card .num{position:absolute;top:22px;right:26px;font-family:'Space Grotesk',sans-serif;font-size:13px;color:var(--slate-400);letter-spacing:0.08em;}
+
+  /* ---------- ABOUT / WHY ---------- */
+  .about{background:linear-gradient(180deg,var(--navy-900),var(--navy-950));border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);}
+  .about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+  .about-visual{position:relative;aspect-ratio:1/1;max-width:360px;margin:0 auto;}
+  .about-visual svg{width:100%;height:100%;}
+  .about-copy{text-align:left;}
+  .about-copy .kicker{font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue-300);display:block;margin-bottom:14px;}
+  .about-copy h2{font-size:clamp(26px,3.6vw,38px);color:var(--silver-50);margin-bottom:18px;line-height:1.18;}
+  .about-copy p{color:var(--slate-300);font-size:15.5px;margin-bottom:24px;}
+  .about-list{display:flex;flex-direction:column;gap:14px;margin:0 0 6px;}
+  .about-list li{display:flex;gap:12px;align-items:flex-start;list-style:none;font-size:14.5px;color:var(--silver-50);text-align:left;}
+  .about-list svg{width:18px;height:18px;color:var(--blue-400);margin-top:3px;flex-shrink:0;}
+  @media (max-width:860px){.about .wrap{grid-template-columns:1fr;}.about-copy{text-align:center;}.about-list li{text-align:left;}}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--navy-950);}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
+  .contact-info{text-align:left;}
+  .contact-info .kicker{font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue-300);display:block;margin-bottom:14px;}
+  .contact-info h2{font-size:clamp(26px,3.6vw,38px);margin-bottom:16px;color:var(--silver-50);}
+  .contact-info p{color:var(--slate-300);font-size:15.5px;margin-bottom:28px;max-width:440px;}
+  .info-row{display:flex;align-items:flex-start;gap:14px;text-align:left;padding:16px 0;border-bottom:1px solid var(--hairline);}
+  .info-row svg{width:20px;height:20px;color:var(--blue-400);flex-shrink:0;margin-top:3px;}
+  .info-row strong{display:block;font-family:'Space Grotesk',sans-serif;font-size:12.5px;letter-spacing:0.02em;color:var(--silver-50);margin-bottom:3px;}
+  .info-row span, .info-row a{font-size:14px;color:var(--slate-300);}
+  .info-row a:hover{color:var(--blue-300);}
+  .social-row{display:flex;gap:12px;margin:26px 0 0;}
+  .social-row a{width:44px;height:44px;border:1px solid var(--hairline);border-radius:10px;display:flex;align-items:center;justify-content:center;transition:border-color .2s ease, background .2s ease;}
+  .social-row a:hover{border-color:var(--blue-400);background:rgba(47,111,237,0.1);}
+  .social-row svg{width:19px;height:19px;color:var(--blue-300);}
+
+  form.msg{background:linear-gradient(180deg,var(--navy-900),var(--navy-850));border:1px solid var(--hairline);border-radius:16px;padding:34px;text-align:left;}
+  form.msg .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  form.msg label{display:block;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;color:var(--slate-300);margin-bottom:7px;margin-top:18px;}
+  form.msg label:first-of-type, form.msg .row2 label{margin-top:0;}
+  form.msg input, form.msg select, form.msg textarea{
+    width:100%;background:var(--navy-950);border:1px solid var(--hairline);border-radius:9px;color:var(--silver-50);
+    padding:12px 14px;font-family:'Inter',sans-serif;font-size:14.5px;
+  }
+  form.msg input:focus, form.msg select:focus, form.msg textarea:focus{border-color:var(--blue-400);outline:none;}
+  form.msg select{appearance:none;-webkit-appearance:none;cursor:pointer;}
+  form.msg textarea{resize:vertical;min-height:110px;}
+  form.msg button{
+    margin-top:24px;width:100%;background:linear-gradient(180deg,var(--blue-500),var(--blue-600));color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;letter-spacing:0.02em;
+    padding:15px;border:none;border-radius:10px;cursor:pointer;
+    box-shadow:0 6px 20px rgba(47,111,237,0.4);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  form.msg button:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(47,111,237,0.55);}
+  @media (max-width:860px){.contact .wrap{grid-template-columns:1fr;}.contact-info{text-align:center;}.contact-info p{margin-left:auto;margin-right:auto;}.info-row{text-align:left;}.social-row{justify-content:center;}}
+  .follow-label{text-align:center;margin-top:48px;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue-300);}
+
+  /* ---------- FOOTER ---------- */
+  footer{border-top:1px solid var(--hairline);padding:34px 28px;background:var(--navy-950);}
+  footer .wrap{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:16px;}
+  footer .fbrand{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--slate-400);}
+  footer .fbrand .mark{width:24px;height:24px;border-radius:6px;object-fit:cover;}
+  footer nav.flinks{display:flex;gap:24px;flex-wrap:wrap;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:0.02em;color:var(--slate-400);}
+  footer nav.flinks a:hover{color:var(--blue-300);}
+
+  /* ---------- MOBILE ---------- */
+  @media (max-width:768px){
+    .hero{
+      min-height:calc(100vh - 76px);
+      min-height:calc(100svh - 76px);
+      display:flex;align-items:center;justify-content:center;
+      padding-top:0;padding-bottom:0;
+    }
+  }
+  @media (max-width:860px){
+    .nav-links{display:none;}
+    .menu-btn{display:flex;}
+    .nav-links.open{
+      display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;
+      background:var(--navy-900);border-bottom:1px solid var(--hairline);padding:22px 28px;gap:18px;
+    }
+    .btn-cta span.long{display:none;}
+    form.msg .row2{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#top" class="brand" aria-label="Qbit Edge Technologies home">
+      <img class="mark" src="qbit-mark.png" width="46" height="46" alt="Qbit Edge Technologies logo">
+      <span class="name">
+        <span class="full">Qbit Edge</span>
+        <span class="sub">TECHNOLOGIES</span>
+      </span>
+    </a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="nav-cta">
+      <a class="btn-cta" href="#contact">
+        <span class="long">Get a Quote</span>
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display:inline"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-pattern" aria-hidden="true">
+      <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" stroke="var(--blue-500)" stroke-width="0.8" opacity="0.5">
+          <path d="M40 80 H180 V40 M180 80 H320 M220 80 V160 H360"/>
+          <path d="M560 120 H420 V70 M420 120 H300 M360 120 V210 H210"/>
+          <path d="M60 300 H200 V260 M200 300 H340 V340 H460"/>
+          <path d="M540 300 H400 V350 M400 300 H520 V240"/>
+          <circle cx="180" cy="80" r="4" fill="var(--blue-400)"/><circle cx="420" cy="120" r="4" fill="var(--blue-400)"/>
+          <circle cx="200" cy="300" r="4" fill="var(--blue-400)"/><circle cx="400" cy="300" r="4" fill="var(--blue-400)"/>
+          <circle cx="360" cy="160" r="3" fill="var(--blue-300)"/><circle cx="210" cy="210" r="3" fill="var(--blue-300)"/>
+        </g>
+      </svg>
+    </div>
+    <div class="hero-inner">
+      <span class="eyebrow">Established 2017</span>
+      <h1>Technology that gives your business the <em>edge</em>.</h1>
+      <p class="lede">From websites and mobile apps to IT consulting, digital marketing and training — Qbit Edge Technologies designs, builds and supports the digital tools that move your business forward.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#contact">Get a Quote
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display:inline"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn-ghost" href="#services">Explore Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <div class="trust">
+    <div class="wrap">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2.5 6.5L21 10l-5 4.5L17.5 21 12 17l-5.5 4L8 14.5 3 10l6.5-1.5L12 2Z"/></svg>
+        <span><strong>Since 2017</strong>Years of proven delivery</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7l9-4 9 4-9 4-9-4Z"/><path d="M3 7v10l9 4 9-4V7"/></svg>
+        <span><strong>End-to-end</strong>Strategy, build, launch &amp; support</span>
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span><strong>A real partner</strong>Long-term support, not one-off</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">What We Do</span>
+        <h2>Full-stack digital services, under one roof.</h2>
+        <p>Six core capabilities that take an idea from concept to launch — and keep it running long after.</p>
+      </div>
+
+      <div class="svc-grid">
+        <div class="svc-card">
+          <span class="num">01</span>
+          <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></div>
+          <h3>Website Development</h3>
+          <p>Fast, responsive, secure websites and web apps — from marketing sites to custom platforms — built to convert and scale with your business.</p>
+        </div>
+        <div class="svc-card">
+          <span class="num">02</span>
+          <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div>
+          <h3>Mobile App Development</h3>
+          <p>Native and cross-platform iOS &amp; Android apps, engineered for performance and a seamless user experience your customers will love.</p>
+        </div>
+        <div class="svc-card">
+          <span class="num">03</span>
+          <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2Z"/><path d="M9 21h6M10 17v4M14 17v4"/></svg></div>
+          <h3>IT Consulting</h3>
+          <p>Strategic technology guidance — architecture, cloud, security and systems — so you make the right build, buy and scale decisions with confidence.</p>
+        </div>
+        <div class="svc-card">
+          <span class="num">04</span>
+          <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11l18-8-8 18-2-8-8-2Z"/></svg></div>
+          <h3>Digital Marketing</h3>
+          <p>SEO, paid campaigns, social and content that grow your reach and turn traffic into measurable, revenue-driving results.</p>
+        </div>
+        <div class="svc-card">
+          <span class="num">05</span>
+          <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2v6h6"/><path d="M4 2h10l6 6v14H4z"/><path d="M9 15l2 2 4-4"/></svg></div>
+          <h3>Project Support</h3>
+          <p>Ongoing maintenance, staff augmentation and managed support to keep your products stable and your teams moving at full speed.</p>
+        </div>
+        <div class="svc-card">
+          <span class="num">06</span>
+          <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 10L12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg></div>
+          <h3>Corporate Training</h3>
+          <p>Hands-on training in modern development, tools and workflows to upskill your teams and future-proof your organisation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="wrap">
+      <div class="about-visual" aria-hidden="true">
+        <svg viewBox="0 0 300 300">
+          <defs>
+            <linearGradient id="aboutSilver" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f4f8fc"/><stop offset="100%" stop-color="#7f93ad"/></linearGradient>
+            <linearGradient id="aboutBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#8fb2f8"/><stop offset="100%" stop-color="#1e5bd6"/></linearGradient>
+          </defs>
+          <polygon points="150,24 258,86 258,214 150,276 42,214 42,86" fill="none" stroke="url(#aboutSilver)" stroke-width="2" opacity="0.9"/>
+          <polygon points="150,60 226,104 226,196 150,240 74,196 74,104" fill="none" stroke="var(--blue-500)" stroke-width="1" stroke-dasharray="3 5" opacity="0.6"/>
+          <circle cx="150" cy="150" r="52" fill="none" stroke="url(#aboutSilver)" stroke-width="5"/>
+          <path d="M162 162 L206 206" stroke="url(#aboutBlue)" stroke-width="7" stroke-linecap="round"/>
+          <path d="M196 150 L246 116 L232 172 Z" fill="url(#aboutBlue)" opacity="0.9"/>
+          <text x="150" y="285" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="15" fill="var(--blue-300)">EST. 2017</text>
+        </svg>
+      </div>
+      <div class="about-copy">
+        <span class="kicker">Who We Are</span>
+        <h2>A technology partner built for the long run.</h2>
+        <p>Founded in 2017, Qbit Edge Technologies is a full-stack technology company. From the first line of code to launch and beyond, we design, build, market and support digital products for businesses across the region — combining engineering depth with a partner's commitment to your success.</p>
+        <ul class="about-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4L19 6"/></svg> One team for web, mobile, marketing and support</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4L19 6"/></svg> Senior expertise across the full delivery lifecycle</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4L19 6"/></svg> Transparent, ongoing partnership — not one-off projects</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-info">
+        <span class="kicker">Get In Touch</span>
+        <h2>Let's build your edge.</h2>
+        <p>Tell us about your project and we'll get back to you with next steps. New builds, ongoing support, or a quick question — we're happy to help.</p>
+
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          <div><strong>Email</strong><a href="mailto:qbitedgetechnologies@gmail.com">qbitedgetechnologies@gmail.com</a></div>
+        </div>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s7-6.3 7-12A7 7 0 0 0 5 10c0 5.7 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <div><strong>Location</strong><span>Central New Jersey, USA</span></div>
+        </div>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          <div><strong>Hours</strong><span>Mon&ndash;Thu: 9:00 AM &ndash; 5:00 PM<br>Fri: 9:00 AM &ndash; 12:00 PM</span></div>
+        </div>
+
+      </div>
+
+      <!-- Quote / contact form — action set to FormSubmit once the real email is provided -->
+      <form class="msg" action="https://formsubmit.co/qbitedgetechnologies@gmail.com" method="post">
+        <input type="hidden" name="_subject" value="New quote request from qbitedge website">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="row2">
+          <div>
+            <label for="fname">Name</label>
+            <input id="fname" name="Name" type="text" required placeholder="Your name">
+          </div>
+          <div>
+            <label for="fcompany">Company</label>
+            <input id="fcompany" name="Company" type="text" placeholder="Company (optional)">
+          </div>
+        </div>
+        <div class="row2">
+          <div>
+            <label for="femail">Email</label>
+            <input id="femail" name="Email" type="email" required placeholder="you@company.com">
+          </div>
+          <div>
+            <label for="fphone">Phone</label>
+            <input id="fphone" name="Phone" type="tel" placeholder="Your phone (optional)">
+          </div>
+        </div>
+        <label for="fservice">Service Interested In</label>
+        <select id="fservice" name="Service">
+          <option value="">Select a service…</option>
+          <option>Website Development</option>
+          <option>Mobile App Development</option>
+          <option>IT Consulting</option>
+          <option>Digital Marketing</option>
+          <option>Project Support</option>
+          <option>Corporate Training</option>
+          <option>Something else</option>
+        </select>
+        <label for="fmsg">Project Details</label>
+        <textarea id="fmsg" name="Project Details" required placeholder="Tell us what you're looking to build or improve…"></textarea>
+        <button type="submit">Request a Quote</button>
+      </form>
+    </div>
+    <div class="wrap" style="display:block;">
+      <p class="follow-label">Follow us</p>
+      <div class="social-row" style="justify-content:center;margin-top:14px;">
+        <a href="https://www.facebook.com/Qbit.Edge.58760/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12Z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/qbit.edge0717" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@qbit.edge.technol" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 2h-3v13.5a3 3 0 1 1-2.5-2.96V9.4a6 6 0 1 0 5.5 5.98V8.9a7.5 7.5 0 0 0 4.5 1.5V7.4a4.5 4.5 0 0 1-4.5-4.5V2Z"/></svg>
+        </a>
+        <a href="mailto:qbitedgetechnologies@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">
+      <img class="mark" src="qbit-mark.png" width="24" height="24" alt="">
+      <span>© <span id="year"></span> Qbit Edge Technologies. All rights reserved.</span>
+    </div>
+    <nav class="flinks">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#top">Back to top</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+</script>
+
+</body>
+</html>
