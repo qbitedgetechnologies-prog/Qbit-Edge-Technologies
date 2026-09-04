@@ -831,10 +831,12 @@
         </div>
       </div>
 
-      <!-- Estimate form -> FormSubmit AJAX endpoint (emails qbitedgetechnologies@gmail.com) -->
-      <form class="card" id="estimateForm" action="https://formsubmit.co/ajax/qbitedgetechnologies@gmail.com" method="POST">
+      <!-- Estimate form -> FormSubmit (emails qbitedgetechnologies@gmail.com); redirects back with ?sent=1 -->
+      <form class="card" id="estimateForm" action="https://formsubmit.co/qbitedgetechnologies@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="New estimate request — qbitedgetechnologies.com">
         <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://qbitedgetechnologies.com/?sent=1">
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="form-row">
           <div class="field">
@@ -926,42 +928,15 @@
     });
   }
 
-  // Estimate form submit (FormSubmit AJAX)
-  const form = document.getElementById('estimateForm');
+  // Estimate form: submits natively to FormSubmit, which redirects back with ?sent=1.
+  // Show an inline success message on return.
   const status = document.getElementById('formStatus');
-
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const action = form.getAttribute('action');
-
-      const submitBtn = form.querySelector('button[type="submit"]');
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending...';
-
-      try {
-        const res = await fetch(action, {
-          method: 'POST',
-          headers: { Accept: 'application/json' },
-          body: new FormData(form)
-        });
-
-        if (res.ok) {
-          status.textContent = 'Thanks — your request is in. We\'ll be in touch shortly.';
-          status.className = 'form-status show ok';
-          form.reset();
-        } else {
-          status.textContent = 'Something went wrong sending that. Please call 732-823-8883.';
-          status.className = 'form-status show err';
-        }
-      } catch (err) {
-        status.textContent = 'Something went wrong sending that. Please call 732-823-8883.';
-        status.className = 'form-status show err';
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Submit request';
-      }
-    });
+  if (status && new URLSearchParams(location.search).has('sent')) {
+    status.textContent = 'Thanks — your request is in. We\'ll be in touch shortly.';
+    status.className = 'form-status show ok';
+    history.replaceState(null, '', location.pathname);
+    const est = document.getElementById('estimate');
+    if (est) est.scrollIntoView();
   }
 </script>
 
