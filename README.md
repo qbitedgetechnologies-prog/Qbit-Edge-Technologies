@@ -34,6 +34,19 @@ python -m http.server 8000
 # then open http://localhost:8000
 ```
 
+## Day / night theme
+
+The header has a sun/moon button (desktop CTA group and next to the mobile menu
+button) that switches between the light and dark themes.
+
+- With no saved choice, the page follows the visitor's OS `prefers-color-scheme`.
+- An explicit choice is stored in `localStorage` under the key `theme`
+  (`"light"` or `"dark"`) and wins over the OS setting from then on.
+- An inline script in `<head>` applies the theme before first paint, so there is
+  no light flash on reload.
+- Theme styles are token overrides under `html.dark` in `src/tailwind.css`, so
+  new light-theme utility classes may need a matching dark override.
+
 ## Quote form
 
 The modal form posts to `https://formsubmit.co/qbitedgetechnologies@gmail.com`
