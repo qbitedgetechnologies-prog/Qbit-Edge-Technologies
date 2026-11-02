@@ -49,12 +49,20 @@ button) that switches between the light and dark themes.
 
 ## Quote form
 
-The modal form posts to `https://formsubmit.co/qbitedgetechnologies@gmail.com`
-(AJAX with an inline success state, native POST as a no-JS fallback).
+The modal form posts to `https://formsubmit.co/qbitedgetechnologies@gmail.com`.
+JavaScript turns it into an inline AJAX submit; if `fetch` is unavailable the
+browser falls back to the form's native POST. The modal itself is opened by
+JavaScript, so visitors without JavaScript see a `<noscript>` notice with the
+phone number and email address instead of a form.
 
 **FormSubmit requires a one-time activation.** If the endpoint has not been
 activated, submissions are rejected. To activate, submit the form once and click
 the **Activate Form** link in the email FormSubmit sends to that inbox.
+
+Spam controls: a hidden `_honey` honeypot, FormSubmit's `_blacklist` phrase list,
+and `maxlength` limits on every field. If spam still gets through, the next step
+is a Cloudflare Turnstile-protected Worker or a different form provider — not
+disabling the inline experience.
 
 To change the destination address, update both places in `index.html`:
 
@@ -65,7 +73,8 @@ To change the destination address, update both places in `index.html`:
 
 Page title, description, canonical URL, Open Graph/Twitter tags, and
 `LocalBusiness` JSON-LD are in `<head>`. Social profile links live in the footer
-and in the JSON-LD `sameAs` array.
+and in the JSON-LD `sameAs` array. `robots.txt` points crawlers at
+`sitemap.xml`, which lists the single canonical page.
 
 ## Deploy
 
@@ -74,3 +83,9 @@ publishes the repository root to GitHub Pages.
 
 - Custom domain: `CNAME` (`qbitedgetechnologies.com`)
 - `.nojekyll` keeps GitHub Pages from processing the files with Jekyll
+- The `check` job runs on pushes and pull requests: it installs dependencies,
+  rebuilds `css/site.css`, and fails if the committed stylesheet is out of date.
+  The deploy job only runs on `main` after that check passes.
+- Dependabot (`.github/dependabot.yml`) opens weekly update PRs for npm and
+  GitHub Actions. Actions are pinned to commit SHAs; bump them deliberately.
+
