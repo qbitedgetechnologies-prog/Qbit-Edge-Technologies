@@ -1,944 +1,826 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Qbit Edge Technologies | Mobile Device &amp; IT Liquidation, Central NJ</title>
-<meta name="description" content="Qbit Edge Technologies buys and resells overstock, returned, and traded-in mobile devices, routers, accessories, and wearables. Trusted eBay seller and back-office tech partner based in Central New Jersey.">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  /* ============================================================
-     Qbit Edge Technologies — design tokens
-     Palette pulled from the logo: graphite base, faceted silver,
-     crystalline blue. Circuit-trace lines echo the mark's own
-     background pattern instead of decorating on top of it.
-     ============================================================ */
-  :root {
-    --bg:          #10141c;
-    --bg-panel:    #161c27;
-    --bg-panel-2:  #1b2230;
-    --line:        rgba(143, 216, 255, 0.14);
-    --line-strong: rgba(143, 216, 255, 0.28);
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qbit Edge Technologies | Mobile Device &amp; IT Liquidation - Central NJ</title>
+    <meta name="description" content="Qbit Edge Technologies buys overstock, returned, and trade-in smartphones, tablets, routers, and IT hardware. Top-rated eBay seller, worldwide distribution, fast payouts, and local pickup in Central New Jersey.">
+    <link rel="canonical" href="https://qbitedgetechnologies.com/">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0F172A">
 
-    --silver:      #c9cfda;
-    --silver-dim:  #838c9a;
-    --ink:         #eef1f6;
-    --ink-dim:     #99a1ad;
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Qbit Edge Technologies">
+    <meta property="og:title" content="Qbit Edge Technologies | Mobile Device &amp; IT Liquidation">
+    <meta property="og:description" content="Turn surplus smartphones, tablets, routers, and IT hardware into working capital. Fast quotes, flexible freight, prompt payouts.">
+    <meta property="og:url" content="https://qbitedgetechnologies.com/">
+    <meta property="og:image" content="https://qbitedgetechnologies.com/qbit-mark.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Qbit Edge Technologies | Mobile Device &amp; IT Liquidation">
+    <meta name="twitter:description" content="Turn surplus smartphones, tablets, routers, and IT hardware into working capital. Fast quotes, flexible freight, prompt payouts.">
+    <meta name="twitter:image" content="https://qbitedgetechnologies.com/qbit-mark.png">
 
-    --blue:        #4f95ff;
-    --blue-bright: #7db4ff;
-    --cyan:        #8fd8ff;
+    <!-- Icons -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-    --font-head: 'Space Grotesk', 'Arial Narrow', sans-serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    --max: 1180px;
-    --edge: 6px;
-  }
+    <!-- Compiled Tailwind CSS (see package.json / npm run build) -->
+    <link rel="stylesheet" href="css/site.css">
 
-  * { box-sizing: border-box; }
-
-  html { scroll-behavior: smooth; }
-
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Qbit Edge Technologies",
+      "url": "https://qbitedgetechnologies.com/",
+      "image": "https://qbitedgetechnologies.com/qbit-mark.png",
+      "telephone": "+1-732-823-8883",
+      "email": "qbitedgetechnologies@gmail.com",
+      "description": "Qbit Edge Technologies purchases overstock, returned, and trade-in smartphones, tablets, routers, and IT hardware, and provides back-office technology solutions from Central New Jersey.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "NJ",
+        "addressCountry": "US"
+      },
+      "areaServed": "US",
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "sameAs": [
+        "https://www.facebook.com/Qbit.Edge.58760/",
+        "https://www.instagram.com/qbit.edge0717",
+        "https://www.tiktok.com/@qbit.edge.technol"
+      ]
     }
-  }
-
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: var(--font-body);
-    font-size: 16px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  /* Circuit-trace backdrop, faint, fixed */
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    background-image:
-      linear-gradient(var(--line) 1px, transparent 1px),
-      linear-gradient(90deg, var(--line) 1px, transparent 1px);
-    background-size: 64px 64px;
-    opacity: 0.25;
-    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 0%, transparent 75%);
-  }
-
-  a { color: inherit; text-decoration: none; }
-  ul { margin: 0; padding: 0; list-style: none; }
-  img { max-width: 100%; display: block; }
-
-  .wrap {
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 0 28px;
-    position: relative;
-    z-index: 1;
-  }
-
-  h1, h2, h3, h4 {
-    font-family: var(--font-head);
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    color: var(--ink);
-    margin: 0;
-  }
-
-  p { margin: 0; }
-
-  .lede {
-    color: var(--ink-dim);
-    max-width: 62ch;
-  }
-
-  /* ---------- Buttons ---------- */
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-family: var(--font-body);
-    font-weight: 600;
-    font-size: 0.95rem;
-    padding: 13px 24px;
-    border: 1px solid transparent;
-    cursor: pointer;
-    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
-    transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
-  }
-  .btn:hover { transform: translateY(-1px); }
-  .btn:active { transform: translateY(0); }
-
-  .btn-primary {
-    background: var(--blue);
-    color: #071022;
-  }
-  .btn-primary:hover { background: var(--blue-bright); }
-
-  .btn-ghost {
-    background: transparent;
-    border-color: var(--line-strong);
-    color: var(--ink);
-  }
-  .btn-ghost:hover { border-color: var(--cyan); color: var(--cyan); }
-
-  .btn-block { width: 100%; justify-content: center; }
-
-  /* ---------- Header ---------- */
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background: rgba(16, 20, 28, 0.88);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--line);
-  }
-
-  .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 28px;
-  }
-
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .brand img {
-    height: 60px;
-    width: 60px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 1px solid var(--line-strong);
-  }
-
-  .brand-name {
-    font-family: var(--font-head);
-    font-weight: 600;
-    font-size: 1.55rem;
-    line-height: 1.15;
-    color: var(--ink);
-  }
-  .brand-name span {
-    display: block;
-    font-family: var(--font-body);
-    font-weight: 400;
-    font-size: 0.85rem;
-    color: var(--silver-dim);
-    letter-spacing: 0.02em;
-  }
-
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-  }
-
-  .nav-links a {
-    font-size: 0.92rem;
-    color: var(--ink-dim);
-    transition: color 0.15s ease;
-  }
-  .nav-links a:hover { color: var(--cyan); }
-
-  .nav-phone {
-    color: var(--ink);
-    font-weight: 600;
-  }
-
-  .nav-cta { display: flex; align-items: center; gap: 20px; }
-
-  .nav-toggle {
-    display: none;
-    background: none;
-    border: 1px solid var(--line-strong);
-    color: var(--ink);
-    width: 40px;
-    height: 40px;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-
-  /* ---------- Hero ---------- */
-  .hero {
-    padding: 88px 0 96px;
-  }
-
-  .hero .wrap {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 56px;
-    align-items: center;
-  }
-
-  .hero-copy {
-    text-align: center;
-  }
-
-  .hero h1 {
-    font-size: clamp(2.3rem, 4vw, 3.4rem);
-    line-height: 1.08;
-    margin-bottom: 22px;
-  }
-
-  .hero-sub {
-    font-size: 1.08rem;
-    margin: 0 auto 34px;
-  }
-
-  .hero-actions {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin-bottom: 44px;
-    flex-wrap: wrap;
-  }
-
-  .hero-tags {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    border-top: 1px solid var(--line);
-    padding-top: 22px;
-  }
-
-  .tag {
-    font-size: 0.78rem;
-    color: var(--silver-dim);
-    border: 1px solid var(--line-strong);
-    padding: 6px 12px;
-    clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
-  }
-
-  .hero-art {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .hero-art svg { width: 100%; height: auto; max-width: 460px; }
-
-  /* ---------- Trust bar ---------- */
-  .trust {
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-    padding: 30px 0;
-  }
-  .trust .wrap {
-    display: flex;
-    justify-content: space-between;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-  .trust-item {
-    flex: 1 1 220px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-  }
-  .trust-item .ico {
-    flex: none;
-    width: 34px;
-    height: 34px;
-    color: var(--cyan);
-  }
-  .trust-item h4 {
-    font-size: 0.95rem;
-    margin-bottom: 4px;
-  }
-  .trust-item p {
-    font-size: 0.85rem;
-    color: var(--ink-dim);
-  }
-
-  /* ---------- Section shell ---------- */
-  section { position: relative; z-index: 1; }
-
-  .section {
-    padding: 96px 0;
-  }
-
-  .section-head {
-    max-width: 640px;
-    margin: 0 auto 52px;
-    text-align: center;
-  }
-
-  .section-head h2 {
-    font-size: clamp(1.7rem, 2.6vw, 2.3rem);
-    margin-bottom: 14px;
-  }
-
-  .section-alt { background: var(--bg-panel); }
-
-  /* ---------- Services ---------- */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--line);
-    border: 1px solid var(--line);
-  }
-
-  .service {
-    background: var(--bg);
-    padding: 32px 28px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 14px;
-    transition: background 0.2s ease;
-  }
-  .section-alt .service { background: var(--bg-panel); }
-
-  .service:hover { background: var(--bg-panel-2); }
-
-  .service .ico {
-    width: 30px;
-    height: 30px;
-    color: var(--blue-bright);
-  }
-
-  .service h3 {
-    font-size: 1.05rem;
-  }
-
-  .service p {
-    font-size: 0.9rem;
-    color: var(--ink-dim);
-  }
-
-  /* ---------- Process ---------- */
-  .process {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
-    position: relative;
-  }
-
-  .step {
-    padding: 0 24px 0 0;
-    border-left: 1px solid var(--line);
-    padding-left: 24px;
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .step:first-child { border-left: none; padding-left: 0; }
-
-  .step-num {
-    font-family: var(--font-head);
-    font-size: 0.85rem;
-    color: var(--cyan);
-    border: 1px solid var(--line-strong);
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 18px;
-    clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
-  }
-
-  .step h4 {
-    font-size: 1rem;
-    margin-bottom: 8px;
-  }
-
-  .step p {
-    font-size: 0.88rem;
-    color: var(--ink-dim);
-  }
-
-  /* ---------- About split ---------- */
-  .about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    align-items: center;
-    text-align: center;
-  }
-
-  .about-copy { display: flex; flex-direction: column; align-items: center; }
-
-  .about-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: var(--line);
-    border: 1px solid var(--line);
-  }
-  .stat {
-    background: var(--bg);
-    padding: 26px;
-    text-align: center;
-  }
-  .stat b {
-    display: block;
-    font-family: var(--font-head);
-    font-size: 1.5rem;
-    color: var(--cyan);
-    margin-bottom: 4px;
-  }
-  .stat span {
-    font-size: 0.82rem;
-    color: var(--ink-dim);
-  }
-
-  /* ---------- Estimate form ---------- */
-  .estimate {
-    display: grid;
-    grid-template-columns: 0.85fr 1.15fr;
-    gap: 56px;
-    align-items: start;
-  }
-
-  .estimate-copy {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .estimate-copy h2 { margin-bottom: 16px; }
-  .estimate-copy p { margin-bottom: 22px; }
-
-  .estimate-phone {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    font-family: var(--font-head);
-    font-size: 1.3rem;
-    color: var(--ink);
-    margin-top: 28px;
-  }
-  .estimate-phone .ico { width: 22px; height: 22px; color: var(--cyan); }
-
-  form.card {
-    background: var(--bg-panel);
-    border: 1px solid var(--line-strong);
-    padding: 36px;
-    clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 22px 100%, 0 calc(100% - 22px));
-  }
-
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-  }
-
-  .field {
-    margin-bottom: 18px;
-  }
-  .field.full { grid-column: 1 / -1; }
-
-  .field label {
-    display: block;
-    font-size: 0.82rem;
-    color: var(--ink-dim);
-    margin-bottom: 7px;
-    text-align: center;
-  }
-
-  .field input,
-  .field select,
-  .field textarea {
-    text-align: center;
-  }
-
-  .field input,
-  .field select,
-  .field textarea {
-    width: 100%;
-    background: var(--bg);
-    border: 1px solid var(--line-strong);
-    color: var(--ink);
-    padding: 11px 13px;
-    font-family: var(--font-body);
-    font-size: 0.94rem;
-    transition: border-color 0.15s ease;
-  }
-  .field input:focus,
-  .field select:focus,
-  .field textarea:focus {
-    outline: none;
-    border-color: var(--cyan);
-  }
-
-  .field textarea { resize: vertical; min-height: 96px; }
-
-  .form-note {
-    font-size: 0.78rem;
-    color: var(--silver-dim);
-    margin-top: 14px;
-  }
-
-  .form-status {
-    margin-top: 16px;
-    font-size: 0.88rem;
-    display: none;
-  }
-  .form-status.show { display: block; }
-  .form-status.ok { color: var(--cyan); }
-  .form-status.err { color: #ff8f8f; }
-
-  /* ---------- Footer ---------- */
-  footer {
-    border-top: 1px solid var(--line);
-    padding: 28px 0;
-  }
-
-  .footer-social {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 20px;
-  }
-  .footer-social a {
-    width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--cyan);
-    border: 1px solid var(--line-strong);
-    clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
-    transition: border-color 0.15s ease, background 0.15s ease;
-  }
-  .footer-social a:hover { border-color: var(--cyan); background: rgba(143, 216, 255, 0.08); }
-  .footer-social svg { width: 19px; height: 19px; }
-
-  .footer-bottom {
-    text-align: center;
-    font-size: 0.8rem;
-    color: var(--silver-dim);
-  }
-
-  /* ---------- Responsive ---------- */
-  @media (max-width: 920px) {
-    .hero .wrap { grid-template-columns: 1fr; }
-    .hero-art { order: -1; max-width: 320px; margin: 0 auto 12px; }
-    .services-grid { grid-template-columns: repeat(2, 1fr); }
-    .process { grid-template-columns: repeat(2, 1fr); row-gap: 32px; }
-    .step:nth-child(3) { border-left: none; padding-left: 0; }
-    .about { grid-template-columns: 1fr; }
-    .estimate { grid-template-columns: 1fr; }
-    .nav-links { display: none; }
-    .nav-toggle { display: flex; }
-  }
-
-  @media (max-width: 600px) {
-    .hero { padding: 56px 0 64px; }
-    .section { padding: 64px 0; }
-    .services-grid { grid-template-columns: 1fr; }
-    .process { grid-template-columns: 1fr; }
-    .step { border-left: none; padding-left: 0; padding-top: 20px; border-top: 1px solid var(--line); }
-    .step:first-child { border-top: none; padding-top: 0; }
-    .trust .wrap { flex-direction: column; }
-    .form-row { grid-template-columns: 1fr; }
-    form.card { padding: 26px 20px; }
-  }
-
-  /* focus visibility */
-  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
-    outline: 2px solid var(--cyan);
-    outline-offset: 2px;
-  }
-</style>
+    </script>
 </head>
-<body>
+<body class="bg-stone-light text-apple-dark antialiased selection:bg-stripe-blue selection:text-white">
 
-<header>
-  <nav class="nav wrap">
-    <a href="#top" class="brand">
-      <img src="qbit-mark.png" alt="Qbit Edge Technologies logo">
-      <span class="brand-name">QBIT EDGE<span>Technologies</span></span>
-    </a>
-    <div class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#process">How It Works</a>
-      <a href="#about">About</a>
-      <a href="#estimate">Contact</a>
-      <a href="tel:17328238883" class="nav-phone">732-823-8883</a>
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:px-4 focus:py-2 focus:rounded-lg focus:bg-apple-dark focus:text-white focus:text-xs focus:font-semibold">Skip to content</a>
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-apple-dark text-white text-xs font-medium py-2 px-6 flex justify-between items-center border-b border-slate-800">
+        <div class="max-w-7xl mx-auto w-full flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-mint animate-pulse" aria-hidden="true"></span>
+                <span>Active Purchasing: Smartphones, Tablets, Routers &amp; IT Liquidation Lots</span>
+            </div>
+            <div class="flex items-center gap-6 text-[11px] font-mono text-slate-300">
+                <a href="tel:7328238883" class="hover:text-emerald-glow transition-colors"><i class="fa-solid fa-phone mr-1.5 text-emerald-mint" aria-hidden="true"></i> 732-823-8883</a>
+                <span class="hidden sm:inline text-slate-600" aria-hidden="true">|</span>
+                <span class="hidden sm:inline"><i class="fa-solid fa-location-dot mr-1 text-stripe-blue" aria-hidden="true"></i> Central New Jersey</span>
+            </div>
+        </div>
     </div>
-    <div class="nav-cta">
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="1" y1="4" x2="17" y2="4"/><line x1="1" y1="9" x2="17" y2="9"/><line x1="1" y1="14" x2="17" y2="14"/></svg>
-      </button>
+
+    <!-- NAVIGATION BAR -->
+    <header class="sticky top-0 z-40 w-full navbar-glass transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- Brand Logo -->
+                <a href="#top" class="flex items-center gap-3 group">
+                    <img src="qbit-mark.png" alt="" width="40" height="40" class="w-10 h-10 rounded-xl object-cover ring-1 ring-slate-200 shadow-sm group-hover:scale-105 transition-transform">
+                    <div class="flex flex-col">
+                        <div class="flex items-center gap-1.5">
+                            <span class="text-base font-extrabold tracking-tight text-apple-dark leading-none">
+                                Qbit Edge
+                            </span>
+                            <span class="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded badge-green">TECH</span>
+                        </div>
+                        <span class="text-[9px] font-mono text-slate-500 uppercase tracking-widest mt-1">MOBILE &amp; IT LIQUIDATION</span>
+                    </div>
+                </a>
+
+                <!-- Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-6 xl:space-x-9 text-xs font-semibold tracking-wide text-slate-600" aria-label="Primary">
+                    <a href="#services" class="hover:text-stripe-blue transition-colors">Services &amp; Liquidation</a>
+                    <a href="#process" class="hover:text-stripe-blue transition-colors">How It Works</a>
+                    <a href="#inventory" class="hover:text-stripe-blue transition-colors">Accepted Gear</a>
+                    <a href="#about" class="hover:text-stripe-blue transition-colors">About Us</a>
+                </nav>
+
+                <!-- CTAs -->
+                <div class="hidden lg:flex items-center gap-3 xl:gap-4">
+                    <a href="tel:7328238883" class="hidden xl:flex px-4 py-2 rounded-full border border-slate-200 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition-all items-center gap-2">
+                        <i class="fa-solid fa-phone text-emerald-mint" aria-hidden="true"></i> Call 732-823-8883
+                    </a>
+                    <button type="button" onclick="openModal()" class="px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide text-white bg-stripe-blue hover:bg-stripe-blue-hover shadow-md shadow-stripe-blue/20 hover:shadow-stripe-blue/30 transition-all duration-300">
+                        Get Valuation Quote
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Icon -->
+                <div class="lg:hidden flex items-center">
+                    <button type="button" id="mobileMenuBtn" class="text-slate-700 p-2 focus:outline-none" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
+                        <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Dropdown -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-border-subtle px-6 py-6 space-y-4">
+            <a href="#services" class="block text-sm font-semibold text-slate-700">Services &amp; Liquidation</a>
+            <a href="#process" class="block text-sm font-semibold text-slate-700">How It Works</a>
+            <a href="#inventory" class="block text-sm font-semibold text-slate-700">Accepted Gear</a>
+            <a href="#about" class="block text-sm font-semibold text-slate-700">About Us</a>
+            <a href="tel:7328238883" class="block text-sm font-semibold text-emerald-600"><i class="fa-solid fa-phone mr-2" aria-hidden="true"></i> Call 732-823-8883</a>
+            <button type="button" onclick="openModal()" class="w-full mt-2 px-5 py-3 rounded-full text-xs font-semibold text-white bg-stripe-blue text-center">
+                Get Valuation Quote
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <!-- HERO SECTION (Stripe Gradient + Apple Hardware Aesthetics) -->
+        <section id="top" class="relative stripe-gradient-hero pt-16 pb-20 lg:pt-24 lg:pb-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center relative z-10">
+
+                <!-- Location Pill -->
+                <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/90 border border-slate-200 shadow-sm text-xs font-medium text-slate-700 mb-8 backdrop-blur-md">
+                    <span class="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-mint/10 text-emerald-600 border border-emerald-mint/30">CENTRAL NJ HQ</span>
+                    <span class="text-slate-300" aria-hidden="true">|</span>
+                    <span class="text-slate-600">Serving Enterprise, Retail &amp; Wholesale Clients Nationwide</span>
+                    <i class="fa-solid fa-chevron-right text-[10px] text-slate-400" aria-hidden="true"></i>
+                </div>
+
+                <!-- Headline -->
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-apple-dark mb-8 leading-[1.08] max-w-5xl mx-auto">
+                    Mobile Device &amp; IT Liquidation <br class="hidden sm:block"/>
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-stripe-blue via-blue-600 to-emerald-mint">
+                        Made Simple &amp; Profitable.
+                    </span>
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="max-w-3xl mx-auto text-base sm:text-lg text-slate-body mb-12 font-normal leading-relaxed">
+                    Qbit Edge Technologies purchases overstock, trade-in, and returned smartphones, tablets, routers, and IT hardware. Turn surplus inventory into working capital with rapid payouts and local NJ freight support.
+                </p>
+
+                <!-- Dual CTAs -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                    <button type="button" onclick="openModal()" class="w-full sm:w-auto px-8 py-4 rounded-full text-xs font-bold tracking-wider text-white bg-stripe-blue hover:bg-stripe-blue-hover shadow-lg shadow-stripe-blue/25 flex items-center justify-center gap-2.5 transition-all">
+                        SUBMIT INVENTORY FOR QUOTE
+                        <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+                    </button>
+                    <a href="tel:7328238883" class="w-full sm:w-auto px-8 py-4 rounded-full text-xs font-bold tracking-wider text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 shadow-sm flex items-center justify-center gap-2 transition-all">
+                        <i class="fa-solid fa-phone text-emerald-mint" aria-hidden="true"></i>
+                        CALL 732-823-8883
+                    </a>
+                </div>
+
+                <!-- Feature Metric Badges -->
+                <div class="max-w-4xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 font-mono">
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                        <div class="text-[10px] text-slate-500 uppercase tracking-wider">Top eBay Storefront</div>
+                        <div class="text-xl font-bold text-stripe-blue mt-1">High Seller Rating</div>
+                        <div class="text-[10px] text-emerald-700 font-semibold mt-1">Verified Buyer &amp; Seller</div>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                        <div class="text-[10px] text-slate-500 uppercase tracking-wider">Payout Speed</div>
+                        <div class="text-xl font-bold text-apple-dark mt-1">24-48 Hours</div>
+                        <div class="text-[10px] text-slate-500 mt-1">Upon Lot Verification</div>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                        <div class="text-[10px] text-slate-500 uppercase tracking-wider">Accepted Lots</div>
+                        <div class="text-xl font-bold text-emerald-600 mt-1">Single to Pallets</div>
+                        <div class="text-[10px] text-emerald-700 font-semibold mt-1">High &amp; Low End Lots</div>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                        <div class="text-[10px] text-slate-500 uppercase tracking-wider">Pickup Logistics</div>
+                        <div class="text-xl font-bold text-apple-dark mt-1">Freight / Local</div>
+                        <div class="text-[10px] text-stripe-blue font-semibold mt-1">Central NJ Direct</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SERVICES & OFFERINGS (Apple Style Grid) -->
+        <section id="services" class="py-24 bg-white border-t border-border-subtle">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+                <div class="max-w-3xl mb-16">
+                    <div class="text-xs font-mono font-bold text-stripe-blue uppercase tracking-widest">// OUR CORE SERVICES</div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-apple-dark mt-2 mb-4">Complete IT &amp; Mobile Asset Solutions</h2>
+                    <p class="text-sm text-slate-body leading-relaxed">
+                        We assist businesses, retailers, and wholesalers with end-to-end device lifecycle management, liquidation purchasing, and back-office technical solutions.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Service 1 -->
+                    <div class="card-apple rounded-3xl p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-stripe-blue/10 flex items-center justify-center text-stripe-blue text-xl mb-6">
+                                <i class="fa-solid fa-boxes-packing" aria-hidden="true"></i>
+                            </div>
+                            <span class="text-[10px] font-mono font-bold px-3 py-1 rounded-full badge-blue uppercase">Core Buying</span>
+                            <h3 class="text-xl font-bold text-apple-dark mt-3 mb-3">Overstock &amp; Liquidation Purchasing</h3>
+                            <p class="text-xs text-slate-body leading-relaxed mb-6">
+                                We purchase bulk overstock, excess inventory, and end-of-life mobile devices, routers, and IT hardware in single transactions.
+                            </p>
+                            <ul class="space-y-2 text-xs text-slate-600 mb-8 font-medium">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-mint" aria-hidden="true"></i> Full inventory buyout quotes</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-mint" aria-hidden="true"></i> Single-box to multi-pallet lots</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-mint" aria-hidden="true"></i> Immediate capital return</li>
+                            </ul>
+                        </div>
+                        <button type="button" onclick="openModal('Overstock & Liquidation')" class="w-full py-3 rounded-xl bg-stone-muted hover:bg-slate-200 text-xs font-semibold text-stripe-blue transition-all flex items-center justify-center gap-2">
+                            Sell Overstock Lots <i class="fa-solid fa-arrow-right text-[10px]" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="card-apple rounded-3xl p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-mint/10 flex items-center justify-center text-emerald-600 text-xl mb-6">
+                                <i class="fa-solid fa-rotate" aria-hidden="true"></i>
+                            </div>
+                            <span class="text-[10px] font-mono font-bold px-3 py-1 rounded-full badge-green uppercase">Returns &amp; Trade-Ins</span>
+                            <h3 class="text-xl font-bold text-apple-dark mt-3 mb-3">Customer Returns &amp; Trade-In Processing</h3>
+                            <p class="text-xs text-slate-body leading-relaxed mb-6">
+                                Convert returned, open-box, or trade-in devices into capital. We evaluate, grade, and process high-end and budget lots.
+                            </p>
+                            <ul class="space-y-2 text-xs text-slate-600 mb-8 font-medium">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-mint" aria-hidden="true"></i> Functional grading &amp; sorting</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-mint" aria-hidden="true"></i> Secure data wiping practices</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-mint" aria-hidden="true"></i> Fair market lot appraisals</li>
+                            </ul>
+                        </div>
+                        <button type="button" onclick="openModal('Customer Returns')" class="w-full py-3 rounded-xl bg-stone-muted hover:bg-slate-200 text-xs font-semibold text-stripe-blue transition-all flex items-center justify-center gap-2">
+                            Process Returned Stock <i class="fa-solid fa-arrow-right text-[10px]" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="card-apple rounded-3xl p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-stripe-blue/10 flex items-center justify-center text-stripe-blue text-xl mb-6">
+                                <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                            </div>
+                            <span class="text-[10px] font-mono font-bold px-3 py-1 rounded-full badge-blue uppercase">Distribution</span>
+                            <h3 class="text-xl font-bold text-apple-dark mt-3 mb-3">Global Resale &amp; Distribution</h3>
+                            <p class="text-xs text-slate-body leading-relaxed mb-6">
+                                Leveraging our top-rated storefronts and worldwide distribution networks to place devices where secondary market demand is highest.
+                            </p>
+                            <ul class="space-y-2 text-xs text-slate-600 mb-8 font-medium">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-mint" aria-hidden="true"></i> Established eBay top-rated channels</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-mint" aria-hidden="true"></i> Global wholesale buyer network</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-mint" aria-hidden="true"></i> Maximized liquidation values</li>
+                            </ul>
+                        </div>
+                        <button type="button" onclick="openModal('Global Resale')" class="w-full py-3 rounded-xl bg-stone-muted hover:bg-slate-200 text-xs font-semibold text-stripe-blue transition-all flex items-center justify-center gap-2">
+                            Partner for Distribution <i class="fa-solid fa-arrow-right text-[10px]" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="card-apple rounded-3xl p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-mint/10 flex items-center justify-center text-emerald-600 text-xl mb-6">
+                                <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+                            </div>
+                            <span class="text-[10px] font-mono font-bold px-3 py-1 rounded-full badge-green uppercase">Tech Services</span>
+                            <h3 class="text-xl font-bold text-apple-dark mt-3 mb-3">Back-Office Tech Solutions</h3>
+                            <p class="text-xs text-slate-body leading-relaxed mb-6">
+                                Technical support and infrastructure services for small and medium businesses needing back-office IT optimization.
+                            </p>
+                            <ul class="space-y-2 text-xs text-slate-600 mb-8 font-medium">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-mint" aria-hidden="true"></i> System setup &amp; network configuration</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-mint" aria-hidden="true"></i> Hardware troubleshooting</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-mint" aria-hidden="true"></i> IT asset lifecycle management</li>
+                            </ul>
+                        </div>
+                        <button type="button" onclick="openModal('Back-Office Tech')" class="w-full py-3 rounded-xl bg-stone-muted hover:bg-slate-200 text-xs font-semibold text-stripe-blue transition-all flex items-center justify-center gap-2">
+                            Request IT Support <i class="fa-solid fa-arrow-right text-[10px]" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="card-apple rounded-3xl p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-stripe-blue/10 flex items-center justify-center text-stripe-blue text-xl mb-6">
+                                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                            </div>
+                            <span class="text-[10px] font-mono font-bold px-3 py-1 rounded-full badge-blue uppercase">eCommerce</span>
+                            <h3 class="text-xl font-bold text-apple-dark mt-3 mb-3">eCommerce Platform Integration</h3>
+                            <p class="text-xs text-slate-body leading-relaxed mb-6">
+                                Direct integration with general-goods eCommerce platforms to sync inventory, automate listings, and streamline fulfillment.
+                            </p>
+                            <ul class="space-y-2 text-xs text-slate-600 mb-8 font-medium">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-mint" aria-hidden="true"></i> Inventory catalog sync</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-mint" aria-hidden="true"></i> Multi-channel listing management</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-mint" aria-hidden="true"></i> Automated order workflow</li>
+                            </ul>
+                        </div>
+                        <button type="button" onclick="openModal('eCommerce Integration')" class="w-full py-3 rounded-xl bg-stone-muted hover:bg-slate-200 text-xs font-semibold text-stripe-blue transition-all flex items-center justify-center gap-2">
+                            Discuss eCommerce Sync <i class="fa-solid fa-arrow-right text-[10px]" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="card-apple rounded-3xl p-8 flex flex-col justify-between bg-gradient-to-br from-stripe-blue/5 to-emerald-mint/5 border-stripe-blue/20">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-stripe-blue text-xl mb-6 shadow-sm">
+                                <i class="fa-solid fa-truck-ramp-box" aria-hidden="true"></i>
+                            </div>
+                            <span class="text-[10px] font-mono font-bold px-3 py-1 rounded-full bg-stripe-blue text-white uppercase">Local NJ Pickup</span>
+                            <h3 class="text-xl font-bold text-apple-dark mt-3 mb-3">Freight &amp; On-Site Pickup</h3>
+                            <p class="text-xs text-slate-body leading-relaxed mb-6">
+                                Located in Central New Jersey, we offer rapid local pickup and freight coordination for bulk electronics lots.
+                            </p>
+                            <ul class="space-y-2 text-xs text-slate-600 mb-8 font-medium">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-mint" aria-hidden="true"></i> Central NJ warehouse loading</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-mint" aria-hidden="true"></i> Freight bill of lading assistance</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-mint" aria-hidden="true"></i> Quick lot inspection &amp; clearance</li>
+                            </ul>
+                        </div>
+                        <a href="tel:7328238883" class="w-full py-3 rounded-xl bg-stripe-blue text-white hover:bg-stripe-blue-hover text-xs font-semibold transition-all flex items-center justify-center gap-2 shadow-md">
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i> Call Direct: 732-823-8883
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS (Apple 4-Step Process) -->
+        <section id="process" class="py-24 bg-stone-light border-t border-border-subtle">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <div class="text-xs font-mono font-bold text-stripe-blue uppercase tracking-widest">// SIMPLE LIQUIDATION PROCESS</div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-apple-dark mt-2 mb-4">4 Steps to Liquidate Your IT Inventory</h2>
+                    <p class="text-sm text-slate-body">
+                        Fast turnaround times, fair valuations, and hassle-free payment verification.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                    <div class="card-apple p-6 rounded-3xl relative">
+                        <div class="w-10 h-10 rounded-xl bg-stripe-blue text-white font-mono font-bold text-sm flex items-center justify-center mb-4">01</div>
+                        <h3 class="text-base font-bold text-apple-dark mb-2">Submit Inventory Details</h3>
+                        <p class="text-xs text-slate-body leading-relaxed">
+                            Share model numbers, quantities, condition breakdown, and device specs via our quick valuation form or direct call.
+                        </p>
+                    </div>
+
+                    <div class="card-apple p-6 rounded-3xl relative">
+                        <div class="w-10 h-10 rounded-xl bg-stripe-blue text-white font-mono font-bold text-sm flex items-center justify-center mb-4">02</div>
+                        <h3 class="text-base font-bold text-apple-dark mb-2">Receive No-Obligation Quote</h3>
+                        <p class="text-xs text-slate-body leading-relaxed">
+                            Our appraisal team evaluates market values and responds with a competitive cash purchase offer for your complete lot.
+                        </p>
+                    </div>
+
+                    <div class="card-apple p-6 rounded-3xl relative">
+                        <div class="w-10 h-10 rounded-xl bg-stripe-blue text-white font-mono font-bold text-sm flex items-center justify-center mb-4">03</div>
+                        <h3 class="text-base font-bold text-apple-dark mb-2">Arrange Pickup / Shipping</h3>
+                        <p class="text-xs text-slate-body leading-relaxed">
+                            Schedule a freight pickup or arrange local Central NJ drop-off/pickup for fast lot transfer.
+                        </p>
+                    </div>
+
+                    <div class="card-apple p-6 rounded-3xl relative">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-700 text-white font-mono font-bold text-sm flex items-center justify-center mb-4">04</div>
+                        <h3 class="text-base font-bold text-apple-dark mb-2">Prompt Payout</h3>
+                        <p class="text-xs text-slate-body leading-relaxed">
+                            Upon inspection and verification, funds are released immediately through wire, ACH, or company check.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ACCEPTED HARDWARE CATEGORIES -->
+        <section id="inventory" class="py-24 bg-white border-t border-border-subtle">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                    <div>
+                        <div class="text-xs font-mono font-bold text-stripe-blue uppercase tracking-widest">// ACCEPTED CATEGORIES</div>
+                        <h2 class="text-3xl font-extrabold text-apple-dark mt-2">What We Buy &amp; Process</h2>
+                    </div>
+                    <div class="mt-4 md:mt-0">
+                        <span class="text-xs font-mono text-slate-500">Accepting Apple, Samsung, Google, Cisco, Netgear &amp; More</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="p-6 rounded-3xl bg-stone-muted border border-slate-200">
+                        <div class="text-stripe-blue text-2xl mb-3"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></div>
+                        <h3 class="text-base font-bold text-apple-dark mb-1">Smartphones</h3>
+                        <p class="text-xs text-slate-600">iPhones, Galaxy series, Pixel, carrier locked or unlocked, brand new to return grade.</p>
+                    </div>
+
+                    <div class="p-6 rounded-3xl bg-stone-muted border border-slate-200">
+                        <div class="text-stripe-blue text-2xl mb-3"><i class="fa-solid fa-tablet-screen-button" aria-hidden="true"></i></div>
+                        <h3 class="text-base font-bold text-apple-dark mb-1">Tablets &amp; e-Readers</h3>
+                        <p class="text-xs text-slate-600">iPads, Galaxy Tabs, Surface Pros, enterprise handheld terminals.</p>
+                    </div>
+
+                    <div class="p-6 rounded-3xl bg-stone-muted border border-slate-200">
+                        <div class="text-stripe-blue text-2xl mb-3"><i class="fa-solid fa-wifi" aria-hidden="true"></i></div>
+                        <h3 class="text-base font-bold text-apple-dark mb-1">Routers &amp; Networking</h3>
+                        <p class="text-xs text-slate-600">5G hotspot routers, enterprise gateways, modems, mesh Wi-Fi nodes.</p>
+                    </div>
+
+                    <div class="p-6 rounded-3xl bg-stone-muted border border-slate-200">
+                        <div class="text-stripe-blue text-2xl mb-3"><i class="fa-solid fa-watch" aria-hidden="true"></i></div>
+                        <h3 class="text-base font-bold text-apple-dark mb-1">Wearables &amp; Accessories</h3>
+                        <p class="text-xs text-slate-600">Smartwatches, wireless audio, OEM chargers, cases, and mobile peripherals.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT & WHY US SECTION -->
+        <section id="about" class="py-24 bg-stone-light border-t border-border-subtle">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                    <div class="lg:col-span-6">
+                        <div class="text-xs font-mono font-bold text-stripe-blue uppercase tracking-widest">// ABOUT QBIT EDGE TECHNOLOGIES</div>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-apple-dark mt-2 mb-6">Central New Jersey's Trusted Mobile &amp; IT Liquidation Partner</h2>
+                        <p class="text-sm text-slate-body leading-relaxed mb-4">
+                            Qbit Edge Technologies specializes in purchasing overstock, returned, and end-of-life mobile devices, routers, and IT equipment. Based in Central NJ, we operate top-rated eCommerce channels and maintain global buyer connections to ensure sellers get the highest return on excess stock.
+                        </p>
+                        <p class="text-sm text-slate-body leading-relaxed mb-6">
+                            Whether you are a retailer cleaning out customer returns, a business upgrading corporate mobile hardware, or a distributor liquidating surplus warehouse inventory, Qbit Edge provides fast quotes, flexible freight, and prompt payments.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-200 font-mono text-xs">
+                            <div class="flex items-center gap-2 text-slate-700">
+                                <i class="fa-solid fa-circle-check text-emerald-mint" aria-hidden="true"></i> Top-Rated Seller Credentials
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-700">
+                                <i class="fa-solid fa-circle-check text-emerald-mint" aria-hidden="true"></i> Central NJ Local Freight
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-700">
+                                <i class="fa-solid fa-circle-check text-emerald-mint" aria-hidden="true"></i> Fast Bank Wire Payouts
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-700">
+                                <i class="fa-solid fa-circle-check text-emerald-mint" aria-hidden="true"></i> Multi-Lot Capacity
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6">
+                        <div class="card-apple p-8 rounded-3xl shadow-xl border-slate-200">
+                            <h3 class="text-xl font-bold text-apple-dark mb-4"><i class="fa-solid fa-comments text-stripe-blue mr-2" aria-hidden="true"></i> Direct Contact &amp; Location</h3>
+                            <p class="text-xs text-slate-body mb-6 leading-relaxed">
+                                Need an immediate phone appraisal for an inventory lot? Connect directly with our purchasing director.
+                            </p>
+
+                            <div class="space-y-4 text-xs">
+                                <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-stone-muted">
+                                    <i class="fa-solid fa-phone text-emerald-600 text-base mt-0.5" aria-hidden="true"></i>
+                                    <div>
+                                        <div class="font-bold text-apple-dark">Phone Contact</div>
+                                        <a href="tel:7328238883" class="text-stripe-blue font-mono font-semibold hover:underline">732-823-8883</a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-stone-muted">
+                                    <i class="fa-solid fa-envelope text-emerald-600 text-base mt-0.5" aria-hidden="true"></i>
+                                    <div class="min-w-0">
+                                        <div class="font-bold text-apple-dark">Email</div>
+                                        <a href="mailto:qbitedgetechnologies@gmail.com" class="text-stripe-blue font-mono font-semibold hover:underline break-all">qbitedgetechnologies@gmail.com</a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-stone-muted">
+                                    <i class="fa-solid fa-location-dot text-stripe-blue text-base mt-0.5" aria-hidden="true"></i>
+                                    <div>
+                                        <div class="font-bold text-apple-dark">Central NJ Logistics HQ</div>
+                                        <div class="text-slate-600 font-mono">Central New Jersey, USA</div>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-stone-muted">
+                                    <i class="fa-solid fa-clock text-slate-500 text-base mt-0.5" aria-hidden="true"></i>
+                                    <div>
+                                        <div class="font-bold text-apple-dark">Operating Hours</div>
+                                        <div class="text-slate-600 font-mono">Mon - Fri: 9:00 AM - 6:00 PM EST</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" onclick="openModal()" class="w-full mt-6 py-3.5 rounded-xl bg-stripe-blue hover:bg-stripe-blue-hover text-white font-semibold text-xs transition-all shadow-md">
+                                Request Inventory Valuation Quote
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA BANNER -->
+        <section class="py-20 stripe-gradient-hero border-t border-border-subtle text-center relative">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-apple-dark mb-6">
+                    Ready to Turn Surplus Tech Into Cash?
+                </h2>
+                <p class="text-sm sm:text-base text-slate-body max-w-xl mx-auto mb-8">
+                    Contact Qbit Edge Technologies today. Get a competitive buyout quote on smartphones, routers, and IT assets.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <button type="button" onclick="openModal()" class="w-full sm:w-auto px-8 py-4 rounded-full text-xs font-bold tracking-wider text-white bg-stripe-blue hover:bg-stripe-blue-hover shadow-xl shadow-stripe-blue/20 transition-all">
+                        SUBMIT INVENTORY LOT
+                    </button>
+                    <a href="tel:7328238883" class="w-full sm:w-auto px-8 py-4 rounded-full text-xs font-bold tracking-wider text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 transition-all">
+                        <i class="fa-solid fa-phone text-emerald-mint mr-2" aria-hidden="true"></i> CALL 732-823-8883
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-border-subtle py-12 text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <a href="#top" class="flex items-center gap-3" aria-label="Qbit Edge Technologies home">
+                    <img src="qbit-mark.png" alt="" width="28" height="28" class="w-7 h-7 rounded-lg object-cover ring-1 ring-slate-200">
+                    <span class="font-bold text-apple-dark tracking-tight text-sm">Qbit Edge Technologies</span>
+                </a>
+
+                <div class="flex items-center gap-3">
+                    <a href="https://www.facebook.com/Qbit.Edge.58760/" target="_blank" rel="noopener" aria-label="Qbit Edge on Facebook" class="w-9 h-9 rounded-full border border-slate-200 text-slate-600 hover:text-stripe-blue hover:border-stripe-blue/40 flex items-center justify-center transition-colors">
+                        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.instagram.com/qbit.edge0717" target="_blank" rel="noopener" aria-label="Qbit Edge on Instagram" class="w-9 h-9 rounded-full border border-slate-200 text-slate-600 hover:text-stripe-blue hover:border-stripe-blue/40 flex items-center justify-center transition-colors">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@qbit.edge.technol" target="_blank" rel="noopener" aria-label="Qbit Edge on TikTok" class="w-9 h-9 rounded-full border border-slate-200 text-slate-600 hover:text-stripe-blue hover:border-stripe-blue/40 flex items-center justify-center transition-colors">
+                        <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pt-6 border-t border-slate-200">
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 font-semibold text-slate-600">
+                    <a href="#services" class="hover:text-stripe-blue transition-colors">Services</a>
+                    <a href="#process" class="hover:text-stripe-blue transition-colors">Process</a>
+                    <a href="#inventory" class="hover:text-stripe-blue transition-colors">Accepted Gear</a>
+                    <a href="#about" class="hover:text-stripe-blue transition-colors">About</a>
+                    <a href="tel:7328238883" class="hover:text-emerald-600 transition-colors">732-823-8883</a>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center gap-3 font-mono text-[11px] text-slate-500">
+                    <span>&copy; <span id="year"></span> Qbit Edge Technologies. Central NJ, USA.</span>
+                    <a href="https://ayinadvisors.com" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-stripe-blue transition-colors flex items-center gap-1 font-sans font-medium">
+                        Built by <span class="font-bold text-apple-dark hover:text-stripe-blue">AYiN Advisors</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-slate-500" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INVENTORY VALUATION QUOTE MODAL -->
+    <div id="quoteModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 overflow-y-auto modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="quoteModalTitle" aria-hidden="true">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-8 border border-slate-200 relative shadow-2xl my-auto">
+            <button type="button" onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-700 p-2" aria-label="Close quote form">
+                <i class="fa-solid fa-xmark text-lg" aria-hidden="true"></i>
+            </button>
+
+            <div id="modalFormContainer">
+                <div class="mb-6">
+                    <span class="text-[10px] font-mono font-bold text-stripe-blue uppercase tracking-widest">// FREE LOT APPRAISAL</span>
+                    <h3 id="quoteModalTitle" class="text-2xl font-bold text-apple-dark mt-1">Get an Inventory Purchase Quote</h3>
+                    <p class="text-xs text-slate-500 mt-1">Fill out your lot details and our purchasing team will respond promptly.</p>
+                </div>
+
+                <!-- FormSubmit delivers submissions to qbitedgetechnologies@gmail.com.
+                     JS enhances this into an inline AJAX submit; without JS the native POST still sends. -->
+                <form id="quoteForm" action="https://formsubmit.co/qbitedgetechnologies@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New inventory quote request  -  qbitedgetechnologies.com">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://qbitedgetechnologies.com/?sent=1">
+                    <input type="text" name="_honey" id="quoteHoney" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                    <div class="space-y-4">
+                        <input type="hidden" id="serviceFocus" name="interest" value="General Liquidation">
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label for="quoteName" class="block text-[11px] font-semibold text-slate-600 uppercase mb-1">Full Name *</label>
+                                <input type="text" id="quoteName" name="name" required autocomplete="name" placeholder="John Smith" class="field-input w-full px-4 py-3 rounded-xl bg-stone-muted border border-slate-200 text-apple-dark text-xs font-sans">
+                            </div>
+                            <div>
+                                <label for="quoteCompany" class="block text-[11px] font-semibold text-slate-600 uppercase mb-1">Company Name</label>
+                                <input type="text" id="quoteCompany" name="company" autocomplete="organization" placeholder="Acme Logistics" class="field-input w-full px-4 py-3 rounded-xl bg-stone-muted border border-slate-200 text-apple-dark text-xs font-sans">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label for="quoteEmail" class="block text-[11px] font-semibold text-slate-600 uppercase mb-1">Email *</label>
+                                <input type="email" id="quoteEmail" name="email" required autocomplete="email" placeholder="john@company.com" class="field-input w-full px-4 py-3 rounded-xl bg-stone-muted border border-slate-200 text-apple-dark text-xs font-sans">
+                            </div>
+                            <div>
+                                <label for="quotePhone" class="block text-[11px] font-semibold text-slate-600 uppercase mb-1">Phone *</label>
+                                <input type="tel" id="quotePhone" name="phone" required autocomplete="tel" placeholder="732-000-0000" class="field-input w-full px-4 py-3 rounded-xl bg-stone-muted border border-slate-200 text-apple-dark text-xs font-sans">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="quoteCategory" class="block text-[11px] font-semibold text-slate-600 uppercase mb-1">Primary Gear Category</label>
+                            <select id="quoteCategory" name="category" class="field-input w-full px-4 py-3 rounded-xl bg-stone-muted border border-slate-200 text-apple-dark text-xs font-sans">
+                                <option>Smartphones (iPhones, Galaxy, etc.)</option>
+                                <option>Tablets &amp; Enterprise Handhelds</option>
+                                <option>Routers, Hotspots &amp; Networking</option>
+                                <option>Wearables &amp; Accessories</option>
+                                <option>Mixed Mobile &amp; IT Overstock</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="quoteDetails" class="block text-[11px] font-semibold text-slate-600 uppercase mb-1">Estimated Quantity &amp; Condition</label>
+                            <textarea id="quoteDetails" name="details" rows="3" required placeholder="e.g., 150 units open-box iPhones, 50 Cisco routers, customer returns lot..." class="field-input w-full px-4 py-3 rounded-xl bg-stone-muted border border-slate-200 text-apple-dark text-xs font-sans"></textarea>
+                        </div>
+
+                        <button type="submit" id="quoteSubmit" class="w-full py-3.5 rounded-xl bg-stripe-blue hover:bg-stripe-blue-hover disabled:opacity-60 disabled:cursor-wait text-white font-semibold text-xs tracking-wider transition-all mt-2">
+                            SUBMIT INVENTORY FOR APPRAISAL
+                        </button>
+
+                        <p id="quoteError" class="hidden text-[11px] text-red-600 text-center leading-relaxed" role="alert"></p>
+                        <p class="text-[10px] text-slate-400 text-center leading-relaxed">
+                            We typically respond within one business day. Prefer to talk? Call <a href="tel:7328238883" class="font-semibold text-slate-500 hover:text-stripe-blue">732-823-8883</a>.
+                        </p>
+                    </div>
+                </form>
+            </div>
+
+            <div id="modalSuccess" class="hidden text-center py-10">
+                <div class="w-12 h-12 rounded-2xl bg-emerald-mint/10 text-emerald-600 flex items-center justify-center text-xl mx-auto mb-4">
+                    <i class="fa-solid fa-check" aria-hidden="true"></i>
+                </div>
+                <h4 class="text-xl font-bold text-apple-dark mb-2">Inventory Submission Received</h4>
+                <p class="text-xs text-slate-500 mb-6 max-w-xs mx-auto">Our purchasing team in Central NJ will review your specs and contact you with a purchase quote.</p>
+                <button type="button" onclick="closeModal()" class="px-6 py-2.5 rounded-full bg-stone-muted text-slate-700 text-xs font-semibold border border-slate-200">
+                    Close Window
+                </button>
+            </div>
+        </div>
     </div>
-  </nav>
-  <div id="mobileMenu" class="wrap" style="display:none; padding-bottom:18px;">
-    <div style="display:flex; flex-direction:column; gap:16px;">
-      <a href="#services">Services</a>
-      <a href="#process">How It Works</a>
-      <a href="#about">About</a>
-      <a href="#estimate">Contact</a>
-      <a href="tel:17328238883" class="nav-phone">732-823-8883</a>
-    </div>
-  </div>
-</header>
 
-<main id="top">
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <div class="wrap">
-      <div class="hero-copy">
-        <h1>Overstock, returned, and used mobile inventory — turned into fast, fair payouts.</h1>
-        <p class="hero-sub lede">Qbit Edge Technologies buys and resells full inventories of smartphones, tablets, wearables, routers, and accessories. A worldwide distribution network and a top-rated eBay storefront mean your stock moves quickly, at real market value, with none of the hassle.</p>
-        <div class="hero-actions">
-          <a href="#estimate" class="btn btn-primary">Request a free estimate</a>
-          <a href="#process" class="btn btn-ghost">See how it works</a>
-        </div>
-        <div class="hero-tags">
-          <span class="tag">Smartphones &amp; tablets</span>
-          <span class="tag">Wearables</span>
-          <span class="tag">Routers &amp; networking</span>
-          <span class="tag">Accessories</span>
-          <span class="tag">Back-office solutions</span>
-        </div>
-      </div>
-      <div class="hero-art">
-        <svg viewBox="0 0 460 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Faceted crystal graphic">
-          <defs>
-            <linearGradient id="gShard" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#8fd8ff"/>
-              <stop offset="100%" stop-color="#3763ad"/>
-            </linearGradient>
-            <linearGradient id="gShard2" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#c9cfda"/>
-              <stop offset="100%" stop-color="#6b7382"/>
-            </linearGradient>
-          </defs>
-          <g opacity="0.9">
-            <polygon points="230,40 300,150 230,260 160,150" fill="url(#gShard)" opacity="0.85"/>
-            <polygon points="230,40 230,260 160,150" fill="#9fe0ff" opacity="0.35"/>
-            <polygon points="150,120 210,240 150,340 90,240" fill="url(#gShard2)" opacity="0.9"/>
-            <polygon points="150,120 150,340 90,240" fill="#eef1f6" opacity="0.25"/>
-            <polygon points="300,160 350,250 300,340 255,250" fill="url(#gShard)" opacity="0.7"/>
-          </g>
-          <g stroke="#4f95ff" stroke-width="1" opacity="0.35" fill="none">
-            <circle cx="230" cy="230" r="180"/>
-            <circle cx="230" cy="230" r="140"/>
-          </g>
-          <g stroke="#8fd8ff" stroke-width="1.4" opacity="0.5" fill="none">
-            <line x1="230" y1="40" x2="230" y2="10"/>
-            <line x1="90" y1="240" x2="55" y2="240"/>
-            <line x1="350" y1="250" x2="395" y2="250"/>
-            <circle cx="230" cy="10" r="4" fill="#8fd8ff"/>
-            <circle cx="55" cy="240" r="4" fill="#8fd8ff"/>
-            <circle cx="395" cy="250" r="4" fill="#8fd8ff"/>
-          </g>
-        </svg>
-      </div>
-    </div>
-  </section>
+        // ---- Mobile menu ----
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
 
-  <!-- ============ TRUST BAR ============ -->
-  <section class="trust">
-    <div class="wrap">
-      <div class="trust-item">
-        <svg class="ico" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M17 3 30 9v10c0 7-6 11-13 12C10 30 4 26 4 19V9z"/><path d="M11 17l4 4 8-8"/></svg>
-        <div>
-          <h4>Trusted eBay seller</h4>
-          <p>A proven, top-rated storefront with a track record buyers rely on.</p>
-        </div>
-      </div>
-      <div class="trust-item">
-        <svg class="ico" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="17" cy="17" r="13"/><path d="M4 17h26M17 4c4 4 4 22 0 26M17 4c-4 4-4 22 0 26"/></svg>
-        <div>
-          <h4>Worldwide distribution</h4>
-          <p>A resale network built to move inventory fast, wherever demand is highest.</p>
-        </div>
-      </div>
-      <div class="trust-item">
-        <svg class="ico" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M17 4 4 11v6c0 8 5.5 13 13 13s13-5 13-13v-6z"/><path d="M17 15v8"/></svg>
-        <div>
-          <h4>Based in Central New Jersey</h4>
-          <p>Positioned for quick pickup, drop-off, and freight across the Northeast corridor.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        function closeMobileMenu() {
+            mobileMenu.classList.add('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            mobileMenuBtn.setAttribute('aria-label', 'Open menu');
+        }
 
-  <!-- ============ SERVICES ============ -->
-  <section class="section" id="services">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>What we handle</h2>
-        <p class="lede">From a single pallet of returns to a full-scale liquidation program, we buy, process, and place inventory — and keep the systems running behind it.</p>
-      </div>
-      <div class="services-grid">
-        <div class="service">
-          <svg class="ico" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="6" y="4" width="18" height="22" rx="1"/><line x1="6" y1="9" x2="24" y2="9"/><line x1="6" y1="21" x2="24" y2="21"/></svg>
-          <h3>Overstock &amp; liquidation purchasing</h3>
-          <p>We buy full inventories of high- and low-end mobile devices in a single transaction, no matter the volume.</p>
-        </div>
-        <div class="service">
-          <svg class="ico" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 15a11 11 0 0 1 19-7.5M26 15A11 11 0 0 1 7 22.5"/><path d="M23 4v5h-5M7 26v-5h5"/></svg>
-          <h3>Returns &amp; trade-in processing</h3>
-          <p>Returned, traded-in, and obsolete stock is graded, sorted, and turned back into working capital.</p>
-        </div>
-        <div class="service">
-          <svg class="ico" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="15" cy="10" r="4"/><path d="M11 14h8v9a4 4 0 0 1-8 0z"/></svg>
-          <h3>Wearables, routers &amp; accessories</h3>
-          <p>Smartwatches, fitness trackers, networking gear, and accessories move through the same fast channel.</p>
-        </div>
-        <div class="service">
-          <svg class="ico" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="5" y="6" width="20" height="13" rx="1"/><line x1="11" y1="24" x2="19" y2="24"/><line x1="15" y1="19" x2="15" y2="24"/></svg>
-          <h3>Back-office tech solutions</h3>
-          <p>Software and hardware support for small and medium businesses — the systems that keep resale operations running.</p>
-        </div>
-        <div class="service">
-          <svg class="ico" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="8" width="9" height="9"/><rect x="17" y="8" width="9" height="9"/><rect x="10" y="17" width="9" height="9"/></svg>
-          <h3>eCommerce platform integration</h3>
-          <p>We work directly with general-goods eCommerce platforms to keep listings, stock, and fulfillment in sync.</p>
-        </div>
-        <div class="service">
-          <svg class="ico" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="15" cy="15" r="11"/><path d="M15 4c3 3 3 19 0 22M15 4c-3 3-3 19 0 22M4 15h22"/></svg>
-          <h3>Global resale distribution</h3>
-          <p>An established buyer network places devices where they're worth the most, quickly.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', String(!isOpen));
+            mobileMenuBtn.setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu');
+        });
 
-  <!-- ============ PROCESS ============ -->
-  <section class="section section-alt" id="process">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>How a sale works</h2>
-        <p class="lede">A straightforward path from inventory to payout — built for businesses that don't have time to sit on stock.</p>
-      </div>
-      <div class="process">
-        <div class="step">
-          <div class="step-num">01</div>
-          <h4>Submit your inventory details</h4>
-          <p>Tell us what you're moving — device types, condition, and approximate volume.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">02</div>
-          <h4>Get a no-obligation quote</h4>
-          <p>We assess the inventory and come back with a fair, market-based offer.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">03</div>
-          <h4>We arrange pickup or shipping</h4>
-          <p>Local pickup across Central NJ or freight coordination anywhere else.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">04</div>
-          <h4>Get paid</h4>
-          <p>Once inventory is verified, payment moves quickly — no lengthy holds.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        mobileMenu.querySelectorAll('a, button').forEach((el) => {
+            el.addEventListener('click', closeMobileMenu);
+        });
 
-  <!-- ============ ABOUT ============ -->
-  <section class="section" id="about">
-    <div class="wrap about">
-      <div class="about-copy">
-        <h2 style="margin-bottom:18px;">Built for businesses sitting on inventory they don't want to hold</h2>
-        <p class="lede" style="margin-bottom:20px;">Qbit Edge Technologies is based in Central New Jersey, working with retailers, carriers, and eCommerce sellers who need overstock, returns, and end-of-life devices off their books — without a fire sale. As a trusted eBay seller with a worldwide distribution network, we move inventory to buyers who value it, and we back that up with the software and hardware support small and medium businesses need to keep operating.</p>
-        <a href="#estimate" class="btn btn-ghost">Talk to us about your inventory</a>
-      </div>
-      <div class="about-stats">
-        <div class="stat"><b>New &amp; used</b><span>Devices bought in any condition</span></div>
-        <div class="stat"><b>Worldwide</b><span>Distribution &amp; resale network</span></div>
-        <div class="stat"><b>eBay</b><span>Trusted seller storefront</span></div>
-        <div class="stat"><b>Central NJ</b><span>Home base &amp; logistics hub</span></div>
-      </div>
-    </div>
-  </section>
+        // ---- Quote modal ----
+        const modal = document.getElementById('quoteModal');
+        const modalFormContainer = document.getElementById('modalFormContainer');
+        const modalSuccess = document.getElementById('modalSuccess');
+        const quoteForm = document.getElementById('quoteForm');
+        const quoteSubmit = document.getElementById('quoteSubmit');
+        const quoteError = document.getElementById('quoteError');
+        const serviceFocus = document.getElementById('serviceFocus');
 
-  <!-- ============ ESTIMATE FORM ============ -->
-  <section class="section section-alt" id="estimate">
-    <div class="wrap estimate">
-      <div class="estimate-copy">
-        <h2>Request a free estimate</h2>
-        <p class="lede">Send over what you're working with — a single pallet or a full warehouse — and we'll come back with a quote. No obligation, no pressure.</p>
-        <p class="lede">Prefer to talk it through first? Call us directly.</p>
-        <div class="estimate-phone">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 2a11 11 0 0 0 5.5 5.5l2-2.5 5 2v4a2 2 0 0 1-2 2C11 22 2 13 2 6a2 2 0 0 1 2-2z"/></svg>
-          <a href="tel:17328238883">732-823-8883</a>
-        </div>
-      </div>
+        let lastFocused = null;
 
-      <!-- Estimate form -> FormSubmit (emails qbitedgetechnologies@gmail.com); redirects back with ?sent=1 -->
-      <form class="card" id="estimateForm" action="https://formsubmit.co/qbitedgetechnologies@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="New estimate request — qbitedgetechnologies.com">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://qbitedgetechnologies.com/?sent=1">
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <div class="form-row">
-          <div class="field">
-            <label for="name">Full name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div class="field">
-            <label for="company">Company name</label>
-            <input type="text" id="company" name="company">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="field">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="field">
-            <label for="category">Inventory type</label>
-            <select id="category" name="category">
-              <option>Smartphones</option>
-              <option>Tablets</option>
-              <option>Wearables</option>
-              <option>Routers / networking</option>
-              <option>Accessories</option>
-              <option>Mixed / other</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="quantity">Estimated quantity</label>
-            <input type="text" id="quantity" name="quantity" placeholder="e.g. 500 units">
-          </div>
-        </div>
-        <div class="field full">
-          <label for="details">Tell us about the inventory</label>
-          <textarea id="details" name="details" placeholder="Condition, brands/models, location, timeline..."></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary btn-block">Submit request</button>
-        <p class="form-note">We typically respond within one business day. You can also reach us directly at 732-823-8883.</p>
-        <p class="form-status" id="formStatus"></p>
-      </form>
-    </div>
-  </section>
+        function openModal(serviceName) {
+            lastFocused = document.activeElement;
+            if (serviceName) {
+                serviceFocus.value = serviceName;
+            }
+            quoteError.classList.add('hidden');
+            modalFormContainer.classList.remove('hidden');
+            modalSuccess.classList.add('hidden');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('modal-open');
+            const firstField = document.getElementById('quoteName');
+            if (firstField) {
+                window.setTimeout(() => firstField.focus(), 50);
+            }
+        }
 
-</main>
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('modal-open');
+            if (lastFocused && typeof lastFocused.focus === 'function') {
+                lastFocused.focus();
+            }
+        }
 
-<footer>
-  <div class="wrap">
-    <div class="footer-social">
-      <a href="https://www.facebook.com/Qbit.Edge.58760/" target="_blank" rel="noopener" aria-label="Facebook">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12Z"/></svg>
-      </a>
-      <a href="https://www.instagram.com/qbit.edge0717" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
-      </a>
-      <a href="https://www.tiktok.com/@qbit.edge.technol" target="_blank" rel="noopener" aria-label="TikTok">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 2h-3v13.5a3 3 0 1 1-2.5-2.96V9.4a6 6 0 1 0 5.5 5.98V8.9a7.5 7.5 0 0 0 4.5 1.5V7.4a4.5 4.5 0 0 1-4.5-4.5V2Z"/></svg>
-      </a>
-    </div>
-    <div class="footer-bottom">
-      <span>© <span id="year"></span> Qbit Edge Technologies · Central New Jersey · 732-823-8883</span>
-    </div>
-  </div>
-</footer>
+        // Backdrop click closes; clicks inside the panel do not.
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
 
-<script>
-  // Footer year
-  document.getElementById('year').textContent = new Date().getFullYear();
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
 
-  // Mobile nav toggle
-  const navToggle = document.getElementById('navToggle');
-  const mobileMenu = document.getElementById('mobileMenu');
-  if (navToggle && mobileMenu) {
-    navToggle.addEventListener('click', () => {
-      const open = mobileMenu.style.display === 'block';
-      mobileMenu.style.display = open ? 'none' : 'block';
-      navToggle.setAttribute('aria-expanded', String(!open));
-    });
-    mobileMenu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        mobileMenu.style.display = 'none';
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
+        // ---- Quote form submit (AJAX to FormSubmit, native POST fallback) ----
+        quoteForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
 
-  // Estimate form: submits natively to FormSubmit, which redirects back with ?sent=1.
-  // Show an inline success message on return.
-  const status = document.getElementById('formStatus');
-  if (status && new URLSearchParams(location.search).has('sent')) {
-    status.textContent = 'Thanks — your request is in. We\'ll be in touch shortly.';
-    status.className = 'form-status show ok';
-    history.replaceState(null, '', location.pathname);
-    const est = document.getElementById('estimate');
-    if (est) est.scrollIntoView();
-  }
-</script>
+            // Honeypot: silently stop bots without bothering the visitor.
+            if (document.getElementById('quoteHoney').value) {
+                return;
+            }
+
+            const payload = Object.fromEntries(new FormData(quoteForm).entries());
+            delete payload._honey;
+
+            quoteError.classList.add('hidden');
+            quoteSubmit.disabled = true;
+            quoteSubmit.textContent = 'SENDING...';
+
+            try {
+                const response = await fetch('https://formsubmit.co/ajax/qbitedgetechnologies@gmail.com', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error('Request failed with status ' + response.status);
+                }
+
+                const result = await response.json();
+                if (String(result.success) !== 'true') {
+                    throw new Error(result.message || 'Submission was not accepted.');
+                }
+
+                quoteForm.reset();
+                serviceFocus.value = 'General Liquidation';
+                modalFormContainer.classList.add('hidden');
+                modalSuccess.classList.remove('hidden');
+            } catch (error) {
+                quoteError.innerHTML = 'We couldn't send that just now. Please call <a href="tel:7328238883" class="font-semibold underline">732-823-8883</a> or email <a href="mailto:qbitedgetechnologies@gmail.com" class="font-semibold underline">qbitedgetechnologies@gmail.com</a>.';
+                quoteError.classList.remove('hidden');
+            } finally {
+                quoteSubmit.disabled = false;
+                quoteSubmit.textContent = 'SUBMIT INVENTORY FOR APPRAISAL';
+            }
+        });
+
+        // Returning visitors from the no-JS fallback (?sent=1) see the confirmation.
+        if (new URLSearchParams(location.search).has('sent')) {
+            openModal();
+            modalFormContainer.classList.add('hidden');
+            modalSuccess.classList.remove('hidden');
+            history.replaceState(null, '', location.pathname);
+        }
+    </script>
 
 </body>
 </html>

@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   Qbit Edge Technologies - site styles
+   Utility classes come from Tailwind (compiled to /css/site.css).
+   Everything below is the small amount that utilities can't express.
+   ========================================================================== */
+
+:root {
+  --qbit-blue: #2563eb;
+  --qbit-ink: #0f172a;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Offset anchored sections so the sticky navbar never covers their heading */
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
+/* Stripe-like ambient fluid gradient banner */
+.stripe-gradient-hero {
+  background:
+    radial-gradient(circle at 0% 0%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 100% 30%, rgba(16, 185, 129, 0.1) 0%, transparent 45%),
+    radial-gradient(circle at 50% 100%, rgba(59, 130, 246, 0.06) 0%, transparent 60%);
+}
+
+/* Glassmorphism navigation */
+.navbar-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Apple-style smooth cards */
+.card-apple {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  transition: border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-apple:hover {
+  border-color: rgba(37, 99, 235, 0.3);
+  box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Pill badge colors */
+.badge-green {
+  background: rgba(16, 185, 129, 0.1);
+  color: #047857;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.badge-blue {
+  background: rgba(37, 99, 235, 0.08);
+  color: #2563eb;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+/* Form focus treatment shared by the modal inputs */
+.field-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.modal-backdrop {
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--qbit-blue);
+  outline-offset: 2px;
+}
