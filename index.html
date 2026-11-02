@@ -616,7 +616,7 @@
                 <!-- FormSubmit delivers submissions to qbitedgetechnologies@gmail.com.
                      JS enhances this into an inline AJAX submit; without JS the native POST still sends. -->
                 <form id="quoteForm" action="https://formsubmit.co/qbitedgetechnologies@gmail.com" method="POST">
-                    <input type="hidden" name="_subject" value="New inventory quote request  -  qbitedgetechnologies.com">
+                    <input type="hidden" name="_subject" value="New inventory quote request - qbitedgetechnologies.com">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_next" value="https://qbitedgetechnologies.com/?sent=1">
@@ -805,7 +805,7 @@
                 modalFormContainer.classList.add('hidden');
                 modalSuccess.classList.remove('hidden');
             } catch (error) {
-                quoteError.innerHTML = 'We couldn't send that just now. Please call <a href="tel:7328238883" class="font-semibold underline">732-823-8883</a> or email <a href="mailto:qbitedgetechnologies@gmail.com" class="font-semibold underline">qbitedgetechnologies@gmail.com</a>.';
+                quoteError.innerHTML = `We couldn't send that just now. Please call <a href="tel:7328238883" class="font-semibold underline">732-823-8883</a> or email <a href="mailto:qbitedgetechnologies@gmail.com" class="font-semibold underline">qbitedgetechnologies@gmail.com</a>.`;
                 quoteError.classList.remove('hidden');
             } finally {
                 quoteSubmit.disabled = false;
